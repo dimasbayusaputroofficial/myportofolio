@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dimas Bayu Saputro | HR & Payroll Specialist Executive Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <style>
+        /* --- DESIGN SYSTEM REVOLUTION --- */
+        :root {
+            --bg-primary: #030712;
+            --bg-secondary: rgba(17, 24, 39, 0.6);
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --accent-cyan: #00f5ff;
+            --accent-purple: #a855f7;
+            --accent-gradient: linear-gradient(135deg, #3b82f6, #a855f7, #00f5ff);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --glass-blur: blur(20px);
+            --shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        [data-theme="light"] {
+            --bg-primary: #f8fafc;
+            --bg-secondary: rgba(255, 255, 255, 0.75);
+            --text-primary: #0f172a;
+            --text-secondary: #64748b;
+            --accent-cyan: #2563eb;
+            --accent-purple: #7c3aed;
+            --accent-gradient: linear-gradient(135deg, #2563eb, #7c3aed, #06b6d4);
+            --card-border: rgba(15, 23, 42, 0.08);
+            --shadow: 0 15px 35px rgba(15, 23, 42, 0.05);
+        }
+
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html { scroll-behavior: smooth; text-rendering: optimizeLegibility; }
+        body { background-color: var(--bg-primary); color: var(--text-primary); overflow-x: hidden; transition: background-color 0.5s, color 0.5s; }
+        h1, h2, h3, h4, .logo { font-family: 'Space Grotesk', sans-serif; }
+
+        #webgl-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        section { padding: 100px 0; position: relative; }
+
+        /* --- PREMIUM DESKTOP GLASS NAVBAR --- */
+        nav {
+            position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+            width: 90%; max-width: 1100px; z-index: 1000;
+            background: rgba(3, 7, 18, 0.4); backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--card-border); border-radius: 50px; box-shadow: var(--shadow);
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 12px 24px; }
+        .logo { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); text-decoration: none; }
+        .logo span { background: var(--accent-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-links { display: flex; gap: 8px; list-style: none; align-items: center; }
+        .nav-links a { color: var(--text-secondary); text-decoration: none; font-weight: 600; font-size: 0.85rem; padding: 8px 16px; border-radius: 20px; transition: var(--transition); }
+        .nav-links a:hover, .nav-links a.active { color: var(--text-primary); background: rgba(255, 255, 255, 0.05); }
+        .nav-actions { display: flex; align-items: center; gap: 8px; }
+        
+        .theme-btn, .audio-btn {
+            background: rgba(255,255,255,0.03); border: 1px solid var(--card-border); color: var(--text-primary);
+            width: 40px; height: 40px; border-radius: 50%; cursor: pointer;
+            display: flex; align-items: center; justify-content: center; transition: var(--transition);
+        }
+        .theme-btn:hover, .audio-btn:hover { background: rgba(255,255,255,0.1); border-color: var(--accent-cyan); }
+
+        /* --- IMMERSIVE HERO SECTION --- */
+        #hero { min-height: 100vh; display: flex; align-items: center; padding-top: 100px; }
+        .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center; }
+        .hero-text h1 { font-size: 4rem; line-height: 1.1; font-weight: 800; margin-bottom: 15px; letter-spacing: -2px; }
+        .hero-text h1 span { background: var(--accent-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-text h2 { font-size: 1.6rem; font-weight: 500; color: var(--text-secondary); margin-bottom: 25px; }
+        .hero-text p { color: var(--text-secondary); font-size: 1rem; line-height: 1.7; margin-bottom: 35px; }
+        .btn-group { display: flex; gap: 15px; flex-wrap: wrap; }
+        
+        .btn { padding: 14px 28px; border-radius: 12px; font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: var(--transition); display: inline-flex; align-items: center; gap: 10px; cursor: pointer; border: none; }
+        .btn-primary { background: var(--accent-gradient); color: #fff; box-shadow: 0 10px 20px rgba(168, 85, 247, 0.2); }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(168, 85, 247, 0.3); }
+        .btn-secondary { background: rgba(255,255,255,0.02); color: var(--text-primary); border: 1px solid var(--card-border); }
+        .btn-secondary:hover { transform: translateY(-3px); background: rgba(255,255,255,0.08); border-color: var(--accent-cyan); }
+
+        .hero-avatar-frame { position: relative; width: 100%; max-width: 340px; aspect-ratio: 0.85; margin: 0 auto; }
+        .hero-avatar-box { width: 100%; height: 100%; border-radius: 24px; overflow: hidden; border: 1px solid var(--card-border); box-shadow: var(--shadow); background: #090d16; }
+        .hero-avatar-box img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* --- VISUAL DECORATION: GLASS CARD & TITLES --- */
+        .glass-card { background: var(--bg-secondary); backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur); border: 1px solid var(--card-border); border-radius: 20px; padding: 30px; box-shadow: var(--shadow); transition: var(--transition); position: relative; overflow: hidden; }
+        .glass-card:hover { transform: translateY(-5px); border-color: rgba(0, 245, 255, 0.3); box-shadow: 0 20px 40px rgba(0, 245, 255, 0.1); }
+        
+        .section-header { margin-bottom: 50px; }
+        .section-subtitle { color: var(--text-secondary); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; margin-bottom: 6px; }
+        .section-title { font-size: 2.4rem; font-weight: 700; letter-spacing: -1px; }
+        .section-title span { background: var(--accent-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+
+        /* --- BIO SECTION WITH BENTO GALLERY --- */
+        .about-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 40px; align-items: start; }
+        .about-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .gallery-item { border-radius: 16px; overflow: hidden; aspect-ratio: 1; border: 1px solid var(--card-border); box-shadow: var(--shadow); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+        .gallery-item.tall { grid-row: span 2; aspect-ratio: 0.5; }
+        .about-text p { font-size: 1rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 25px; }
+        
+        .edu-timeline { margin-top: 25px; border-left: 2px solid var(--card-border); padding-left: 20px; }
+        .edu-node { position: relative; padding-bottom: 20px; }
+        .edu-node::before { content: ''; position: absolute; left: -26px; top: 6px; width: 10px; height: 10px; background: var(--accent-purple); border-radius: 50%; }
+        .edu-node h4 { font-size: 1.15rem; }
+        .edu-node h5 { color: var(--text-secondary); font-weight: 500; font-size: 0.92rem; }
+        .edu-node .edu-meta { font-size: 0.75rem; color: var(--accent-cyan); font-weight: 700; }
+
+        /* --- HARDSKILL & SOFTSKILL ROW MATRIX --- */
+        .skills-matrix-wrapper { display: flex; flex-direction: column; gap: 35px; }
+        .skill-category-block h3 { font-size: 1.25rem; margin-bottom: 18px; display: flex; align-items: center; gap: 10px; font-family: 'Space Grotesk', sans-serif; }
+        .skill-category-block.hard h3 i { color: var(--accent-cyan); }
+        .skill-category-block.soft h3 i { color: var(--accent-purple); }
+        
+        .skills-flex-container { display: flex; flex-wrap: wrap; gap: 12px; }
+        .skill-node-pill {
+            background: rgba(255,255,255,0.02); border: 1px solid var(--card-border);
+            padding: 12px 20px; border-radius: 14px; font-size: 0.88rem; font-weight: 600;
+            display: flex; align-items: center; gap: 10px; cursor: pointer; transition: var(--transition);
+        }
+        .skill-node-pill:hover, .skill-node-pill.active {
+            background: rgba(255, 255, 255, 0.05); transform: scale(1.03);
+        }
+        .skill-category-block.hard .skill-node-pill:hover, .skill-category-block.hard .skill-node-pill.active { border-color: var(--accent-cyan); color: #fff; box-shadow: 0 5px 15px rgba(0, 245, 255, 0.15); }
+        .skill-category-block.soft .skill-node-pill:hover, .skill-category-block.soft .skill-node-pill.active { border-color: var(--accent-purple); color: #fff; box-shadow: 0 5px 15px rgba(168, 85, 247, 0.15); }
+        
+        .skill-node-pill i { font-size: 1rem; }
+        .skill-category-block.hard .skill-node-pill i { color: var(--accent-cyan); }
+        .skill-category-block.soft .skill-node-pill i { color: var(--accent-purple); }
+
+        /* Interactive Skills Spec Sheet Panel */
+        .skills-display-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 30px; }
+        .inspector-panel-box { display: flex; flex-direction: column; justify-content: center; }
+        .inspector-empty { text-align: center; color: var(--text-secondary); padding: 40px 20px; border: 2px dashed var(--card-border); border-radius: 16px; font-size: 0.9rem; }
+        
+        .inspector-active-content { display: none; }
+        .inspector-active-content.active { display: block; animation: animFadeIn 0.4s ease forwards; }
+        .inspector-active-content h4 { font-size: 1.35rem; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+        
+        .skill-progress-bar-track { width: 100%; height: 6px; background: rgba(255,255,255,0.05); border-radius: 10px; margin: 12px 0 15px 0; overflow: hidden; }
+        .skill-progress-bar-fill { height: 100%; width: 0%; transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        .hard .skill-progress-bar-fill { background: var(--accent-cyan); }
+        .soft .skill-progress-bar-fill { background: var(--accent-purple); }
+        
+        .skill-badge-level { display: inline-block; padding: 4px 10px; border-radius: 6px; font-size: 0.72rem; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; }
+        .hard .skill-badge-level { background: rgba(0, 245, 255, 0.1); color: var(--accent-cyan); border: 1px solid rgba(0, 245, 255, 0.2); }
+        .soft .skill-badge-level { background: rgba(168, 85, 247, 0.1); color: var(--accent-purple); border: 1px solid rgba(168, 85, 247, 0.2); }
+        .inspector-active-content p { color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; }
+
+        /* --- TRACK RECORD EXPERIENCE --- */
+        .timeline { position: relative; max-width: 850px; margin: 0 auto; }
+        .timeline::before { content: ''; position: absolute; width: 2px; background: var(--card-border); top: 0; bottom: 0; left: 50%; transform: translateX(-50%); }
+        .timeline-item { width: 50%; padding: 15px 30px; position: relative; }
+        .timeline-item::after { content: ''; position: absolute; width: 12px; height: 12px; background: var(--bg-primary); border: 3px solid var(--accent-cyan); border-radius: 50%; top: 28px; z-index: 2; }
+        .timeline-item.left { left: 0; text-align: right; }
+        .timeline-item.right { left: 50%; text-align: left; }
+        .timeline-item.left::after { right: -6px; }
+        .timeline-item.right::after { left: -6px; }
+        .timeline-date { color: var(--accent-purple); font-weight: 700; margin-bottom: 6px; font-size: 0.9rem; }
+        .timeline-card h4 { font-size: 1.2rem; }
+        .timeline-card h5 { color: var(--text-secondary); font-weight: 500; font-size: 0.88rem; margin-bottom: 10px; }
+        .timeline-card ul { list-style: none; display: inline-block; text-align: left; }
+        .timeline-card ul li { color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 6px; padding-left: 15px; position: relative; }
+        .timeline-card ul li::before { content: "•"; position: absolute; left: 0; color: var(--accent-cyan); }
+
+        /* --- SHOWCASE BENTO GRID PORTFOLIO ASSETS --- */
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+        .project-card { display: flex; flex-direction: column; height: 100%; }
+        .project-img-box { width: 100%; aspect-ratio: 1.6; border-radius: 12px; overflow: hidden; margin-bottom: 20px; border: 1px solid var(--card-border); }
+        .project-img-box img { width: 100%; height: 100%; object-fit: cover; }
+        .project-card h3 { font-size: 1.25rem; margin-bottom: 8px; }
+        .project-card p { color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1; }
+        
+        /* Interactive Live Tab Folder Panel inside Bento Project Block */
+        .bento-folder-box { background: rgba(0,0,0,0.15); border-radius: 12px; padding: 15px; margin-bottom: 20px; border: 1px solid var(--card-border); }
+        .folder-tabs-header { display: flex; gap: 6px; margin-bottom: 10px; border-bottom: 1px solid var(--card-border); padding-bottom: 8px; overflow-x: auto; }
+        .folder-btn { background: none; border: none; color: var(--text-secondary); font-size: 0.75rem; font-weight: 700; cursor: pointer; padding: 6px 10px; border-radius: 6px; transition: var(--transition); white-space: nowrap; }
+        .folder-btn.active { color: #fff; background: rgba(0, 245, 255, 0.15); border: 1px solid rgba(0, 245, 255, 0.25); }
+        .folder-pane-view { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; display: none; }
+        .folder-pane-view.active { display: block; }
+        
+        .project-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px; }
+        .tag { background: rgba(255,255,255,0.03); border: 1px solid var(--card-border); padding: 4px 10px; border-radius: 6px; font-size: 0.72rem; color: var(--accent-cyan); font-weight: 600; }
+
+        /* --- CREDENTIAL CERTIFICATES GALLERY --- */
+        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+        .cert-card { padding: 0; cursor: pointer; }
+        .cert-img { width: 100%; aspect-ratio: 1.4; overflow: hidden; border-bottom: 1px solid var(--card-border); border-radius: 18px 18px 0 0; }
+        .cert-img img { width: 100%; height: 100%; object-fit: cover; }
+        .cert-body { padding: 20px; }
+        .cert-body h3 { font-size: 1.15rem; margin-bottom: 4px; }
+        .cert-body p { color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 12px; }
+
+        /* --- MATRIX CONNECTIONS NETWORK (CONTACT) --- */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; align-items: center; }
+        .endpoint-list { display: flex; flex-direction: column; gap: 12px; }
+        .endpoint-card { display: flex; align-items: center; gap: 15px; text-decoration: none; color: inherit; padding: 20px; }
+        .endpoint-icon { width: 46px; height: 46px; border-radius: 12px; background: rgba(255,255,255,0.02); border: 1px solid var(--card-border); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: var(--accent-cyan); transition: var(--transition); }
+        .endpoint-card:hover .endpoint-icon { background: var(--accent-gradient); color: #fff; }
+        .endpoint-info h4 { font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; }
+        .endpoint-info p { font-weight: 600; font-size: 0.92rem; }
+
+        /* --- PREMIUM LIGHTBOX MODAL DEPLOYMENT --- */
+        .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(3, 7, 18, 0.95); backdrop-filter: blur(12px); z-index: 3000; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: var(--transition); }
+        .modal.active { opacity: 1; pointer-events: auto; }
+        .modal-container { background: #0b1120; border: 1px solid var(--card-border); max-width: 600px; width: 90%; border-radius: 20px; padding: 24px; position: relative; transform: translateY(20px); transition: var(--transition); }
+        .modal.active .modal-container { transform: translateY(0); }
+        .modal-close { position: absolute; top: 12px; right: 18px; font-size: 1.6rem; cursor: pointer; color: var(--text-secondary); }
+        .modal-screen { width: 100%; aspect-ratio: 1.4; background: #030712; border-radius: 12px; overflow: hidden; margin-bottom: 18px; border: 1px solid var(--card-border); }
+        .modal-screen img { width: 100%; height: 100%; object-fit: cover; }
+        .modal-details h3 { font-size: 1.35rem; margin-bottom: 8px; }
+        .modal-details p { color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 20px; }
+
+        /* --- FOOTER & TOP LINE TRACKER --- */
+        #progress-container { position: fixed; top: 0; left: 0; width: 100%; height: 3px; z-index: 2000; }
+        #progress-bar { height: 100%; background: var(--accent-gradient); width: 0%; }
+        footer { padding: 40px 0; border-top: 1px solid var(--card-border); text-align: center; color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 40px; }
+
+        @keyframes animFadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* ==========================================================================
+           --- DEVICE FLEXIBLE RESPONSIVE SYSTEM (LAPTOP, COMPUTER, TABLET, PHONE) ---
+           ========================================================================== */
+        @media (max-width: 1024px) {
+            .hero-text h1 { font-size: 3.2rem; }
+            .about-grid, .contact-grid, .skills-display-grid { grid-template-columns: 1fr; gap: 35px; }
+            .hero-avatar-frame { max-width: 300px; }
+        }
+
+        @media (max-width: 768px) {
+            section { padding: 70px 0; }
+            nav { display: none; }
+            
+            /* Mobile Extended Bento Smart Bottom Bar Dock */
+            .mobile-dock {
+                display: flex !important; position: fixed; bottom: 15px; left: 50%; transform: translateX(-50%);
+                width: 92%; background: rgba(11, 17, 32, 0.85); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+                border: 1px solid rgba(255,255,255,0.1); border-radius: 30px; padding: 10px;
+                justify-content: space-around; align-items: center; z-index: 2500; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            }
+            .mobile-dock-btn { color: var(--text-secondary); text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 0.65rem; font-weight: 700; width: 50px; transition: var(--transition); }
+            .mobile-dock-btn i { font-size: 1.15rem; }
+            .mobile-dock-btn.active { color: var(--accent-cyan); }
+
+            .mobile-header-actions { display: flex !important; position: fixed; top: 15px; right: 15px; z-index: 2500; gap: 8px; }
+
+            .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 30px; }
+            .hero-text h1 { font-size: 2.3rem; }
+            .hero-text h2 { font-size: 1.2rem; }
+            .btn-group { justify-content: center; }
+            
+            .timeline::before { left: 16px; }
+            .timeline-item { width: 100%; padding-left: 30px; padding-right: 0; }
+            .timeline-item.left, .timeline-item.right { text-align: left; left: 0; }
+            .timeline-item.left::after, .timeline-item.right::after { left: 10px; }
+            .section-title { font-size: 1.9rem; }
+        }
+
+        .mobile-dock, .mobile-header-actions { display: none; }
+    </style>
+</head>
+<body data-theme="dark">
+
+    <div id="webgl-container"></div>
+    <div id="progress-container"><div id="progress-bar"></div></div>
+
+    <div class="mobile-header-actions">
+        <button class="audio-btn" onclick="toggleSystemMusicEngine()" aria-label="Toggle Background Music"><i id="audio-icon-mob" class="fas fa-volume-mute"></i></button>
+        <button class="theme-btn" onclick="toggleInterfaceTheme()" aria-label="Toggle Theme"><i id="theme-icon-mob" class="fas fa-moon"></i></button>
+    </div>
+
+    <div class="mobile-dock">
+        <a href="#hero" class="mobile-dock-btn active"><i class="fas fa-home"></i>Home</a>
+        <a href="#about" class="mobile-dock-btn"><i class="fas fa-user"></i>Bio</a>
+        <a href="#skills" class="mobile-dock-btn"><i class="fas fa-bolt"></i>Matrix</a>
+        <a href="#experience" class="mobile-dock-btn"><i class="fas fa-history"></i>Track</a>
+        <a href="https://www.instagram.com/dimasbayusaputro_/" target="_blank" class="mobile-dock-btn"><i class="fab fa-instagram"></i>IG</a>
+        <a href="#contact" class="mobile-dock-btn"><i class="fas fa-envelope"></i>Kontak</a>
+    </div>
+
+    <nav id="desktop-nav">
+        <div class="nav-container">
+            <a href="#hero" class="logo">Dimas<span>Bayu.</span></a>
+            <ul class="nav-links">
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#about">Bio</a></li>
+                <li><a href="#skills">Skills Matrix</a></li>
+                <li><a href="#experience">Track Record</a></li>
+                <li><a href="#certifications">Sertifikat</a></li>
+                <li><a href="#projects">Project Assets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://www.instagram.com/dimasbayusaputro_/" target="_blank" class="theme-btn" style="text-decoration:none;" title="Akses Instagram Resmi"><i class="fab fa-instagram"></i></a>
+                <button class="audio-btn" onclick="toggleSystemMusicEngine()" title="Putar Musik Latar Ambient"><i id="audio-icon-desk" class="fas fa-volume-mute"></i></button>
+                <button class="theme-btn" onclick="toggleInterfaceTheme()" title="Ganti Mode Visual"><i id="theme-icon-desk" class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <h1>Dimas Bayu <span>Saputro</span></h1>
+                <h2>Human Resources & Payroll Specialist</h2>
+                <p>Lulusan S1 Agribisnis Universitas Trunojoyo Madura (IPK 3.80) yang diterima di program Magister Pengembangan Sumber Daya Manusia (S2 PSDM) Universitas Airlangga. Berfokus menguasai tata kelola administrasi kompensasi korporasi, eksekusi payroll taktis, kepatuhan hukum tenaga kerja, serta otomasi data analitis talenta.</p>
+                <div class="btn-group">
+                    <a href="https://drive.google.com/drive/folders/1luyYEceg9RRiMxB6a6GZ6rzN_Z12hxqx" target="_blank" class="btn btn-primary"><i class="fa-solid fa-file-pdf"></i> Access CV Dossier</a>
+                    <a href="https://www.linkedin.com/in/dimas-bayu-51307b2a2" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-linkedin"></i> LinkedIn Matrix</a>
+                </div>
+            </div>
+            <div class="hero-avatar-frame">
+                <div class="hero-avatar-box">
+                    <img src="fotoformaldimasbayusaputro.png" alt="Dimas Bayu Saputro Formal Profile">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Bio Parameters</div>
+                <h2 class="section-title">Identity <span>Profile</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-gallery">
+                    <div class="gallery-item tall"><img src="foto1.jpg" alt="Dimas Frame Landscape"></div>
+                    <div class="gallery-item"><img src="foto2.jpg" alt="Dimas Frame Analytics"></div>
+                    <div class="gallery-item"><img src="foto3.jpg" alt="Dimas Frame Corporate"></div>
+                </div>
+                <div class="about-text">
+                    <p>Saya adalah praktisi administrasi SDM bersertifikasi kompetensi BNSP yang mengintegrasikan analisis data kuantitatif dengan regulasi hukum ketenagakerjaan secara akurat. Berkomitmen penuh meningkatkan efisiensi sistem penggajian karyawan, menjamin validitas audit perusahaan, serta merancang skema manajemen operasional talenta yang produktif.</p>
+                    
+                    <h3 style="font-size: 1.2rem; margin-bottom: 15px;"><i class="fa-solid fa-graduation-cap" style="color:var(--accent-purple);"></i> Jalur Akademik</h3>
+                    <div class="edu-timeline">
+                        <div class="edu-node">
+                            <h4>Universitas Airlangga</h4>
+                            <h5>Magister Pengembangan Sumber Daya Manusia (S2 PSDM)</h5>
+                            <span class="edu-meta">2026 - 2027 | On-Going Program</span>
+                        </div>
+                        <div class="edu-node">
+                            <h4>Universitas Trunojoyo Madura</h4>
+                            <h5>S1 Agribisnis (IPK 3.80 / 4.00)</h5>
+                            <span class="edu-meta">2020 - 2024 | Graduate Distinction</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Capabilities Vault</div>
+                <h2 class="section-title">Skills <span>Matrix System</span></h2>
+            </div>
+            <div class="skills-display-grid">
+                <div class="glass-card skills-matrix-wrapper">
+                    
+                    <div class="skill-category-block hard">
+                        <h3><i class="fa-solid fa-layer-group"></i> Technical Hardskills</h3>
+                        <div class="skills-flex-container" id="hardskills-target-row">
+                            </div>
+                    </div>
+                    
+                    <div class="skill-category-block soft">
+                        <h3><i class="fa-solid fa-brain"></i> Behavioral Softskills</h3>
+                        <div class="skills-flex-container" id="softskills-target-row">
+                            </div>
+                    </div>
+
+                </div>
+
+                <div class="glass-card inspector-panel-box" id="global-inspector-wrapper">
+                    <div class="inspector-empty" id="skills-empty-placeholder">
+                        <i class="fa-solid fa-satellite-dish" style="font-size:2rem; color:var(--accent-cyan); margin-bottom:15px; display:block;"></i>
+                        Silahkan sentuh atau klik pada salah satu item kompetensi Hardskill / Softskill untuk memuat rekap parameter kompetensi taktis.
+                    </div>
+                    <div class="inspector-active-content" id="skills-data-inspector-node">
+                        <h4 id="panel-inspect-title">Skill Name</h4>
+                        <div class="skill-badge-level" id="panel-inspect-badge">Expert</div>
+                        <div class="skill-progress-bar-track"><div class="skill-progress-bar-fill" id="panel-inspect-progress"></div></div>
+                        <p id="panel-inspect-desc">Data parameter loading matrix node description system...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <div class="section-subtitle">Chronology & Achievements</div>
+                <h2 class="section-title">Professional & <span>Organizational Tracker</span></h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-date">Sep 2023 - Jan 2024</div>
+                    <div class="glass-card timeline-card">
+                        <span style="font-size: 0.72rem; color: var(--accent-cyan); font-weight: 700; text-transform: uppercase;"><i class="fa-solid fa-briefcase"></i> Kerja Praktik</span>
+                        <h4 style="margin-top: 4px;">Research Assistant / Enumerator</h4>
+                        <h5>Universitas Trunojoyo Madura</h5>
+                        <ul>
+                            <li>Mengurus perizinan birokrasi riset komprehensif tingkat daerah di Bakesbangpol (Selesai 100%).</li>
+                            <li>Mengamankan koleksi data primer dan sekunder dinas pemerintahan sektoral.</li>
+                            <li>Mengeksekusi pemodelan data matriks memakai Expert Choice 11 (Akurasi 95%).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-date">Sep 2022 - Des 2022</div>
+                    <div class="glass-card timeline-card">
+                        <span style="font-size: 0.72rem; color: var(--accent-cyan); font-weight: 700; text-transform: uppercase;"><i class="fa-solid fa-briefcase"></i> Magang</span>
+                        <h4 style="margin-top: 4px;">BUMDES Internship Officer</h4>
+                        <h5>PT. Syncore Indonesia</h5>
+                        <ul>
+                            <li>Menangani kelengkapan berkas legalitas operasional hukum BUMDes binaan.</li>
+                            <li>Menyusun draf SOP administratif baru serta perancangan tata bagan struktur organisasi.</li>
+                            <li>Membangun modul program spreadsheet Excel otomatis untuk integrasi data internal keuangan.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-date">2022</div>
+                    <div class="glass-card timeline-card" style="border-left: 3px solid var(--accent-purple);">
+                        <span style="font-size: 0.72rem; color: var(--accent-purple); font-weight: 700; text-transform: uppercase;"><i class="fa-solid fa-users"></i> Pengalaman Organisasi</span>
+                        <h4 style="margin-top: 4px;">Staff Divisi Acara</h4>
+                        <h5>GEMPITA (Gelanggang Mahasiswa Pertanian Agribisnis)</h5>
+                        <ul>
+                            <li>Merancang, menyusun konsep rundown, dan menyelenggarakan kegiatan orientasi mahasiswa baru skala besar untuk menyambut lebih dari 300+ peserta mahasiswa agribisnis secara kondusif dan sukses.</li>
+                            <li>Mengoordinasikan alur kerja lintas tim operasional logistik lapangan guna memastikan zero-delay eksekusi acara.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Credentials</div>
+                <h2 class="section-title">Sertifikat <span>Resmi</span></h2>
+            </div>
+            <div class="cert-grid">
+                <div class="glass-card cert-card" onclick="openPrestigeModal('bnsphrstaff.jpg', 'Sertifikasi Kompetensi Staf SDM - BNSP RI', 'Sertifikat lisensi kompetensi negara dari BNSP melalui LSP MSDM Universal. Memvalidasi kemampuan eksekusi Uraian Jabatan (Jobdesc), Administrasi Pengupahan/Gaji, Klaim Jaminan Sosial, dan Penyusunan Kebijakan SDM.', 'https://drive.google.com/file/d/1egEUlJ5tvYsXtlBFlxHcl-PMWYd6TcC_/view?usp=sharing')">
+                    <div class="cert-img"><img src="bnsphrstaff.jpg" alt="BNSP HR Staff Badge"></div>
+                    <div class="cert-body">
+                        <h3>Sertifikasi Staf SDM BNSP</h3>
+                        <p>LSP MSDM UNIVERSAL / BNSP RI</p>
+                        <span style="color:var(--accent-cyan); font-weight:700; font-size:0.8rem;">INSPECT CERTIFICATE ▹</span>
+                    </div>
+                </div>
+                <div class="glass-card cert-card" onclick="openPrestigeModal('bootcamppayroll.jpg', 'HR Payroll Specialist - Ioda Academy', 'Kelulusan spesialisasi program kompensasi insentif payroll Ioda Academy. Membuktikan keahlian praktis rumus skala upah, regulasi PPh 21 TER, BPJS Kesehatan/Ketenagapan, rumusan lembur, pesangon PHK, dan pembuatan Master Gaji di Excel.', 'https://drive.google.com/file/d/1HKq6an8ZY-mm9Oe79e7tKJANEhviCFhK/view?usp=sharing')">
+                    <div class="cert-img"><img src="bootcamppayroll.jpg" alt="Ioda Academy Payroll Certificate"></div>
+                    <div class="cert-body">
+                        <h3>HR Payroll Specialist Program</h3>
+                        <p>Ioda Academy Intensive Bootcamp</p>
+                        <span style="color:var(--accent-cyan); font-weight:700; font-size:0.8rem;">INSPECT CERTIFICATE ▹</span>
+                    </div>
+                </div>
+                <div class="glass-card cert-card" onclick="openPrestigeModal('pelatihanhrstaff.jpg', 'Human Capital Staff Program - Platinum Skills', 'Pelatihan taktis Sumber Daya Manusia tingkat korporasi dari LKP-LPP Platinum Skills Indonesia. Materi mencakup taktik penyusunan Job Description, simulasi hitung iuran kesehatan, skema hukum draf Kontrak Kerja, dan standardisasi SOP.', 'https://drive.google.com/file/d/1kWxI5W-YmWbvwZjC9KWSz6Amre7x4nF5/view?usp=sharing')">
+                    <div class="cert-img"><img src="pelatihanhrstaff.jpg" alt="Platinum HC Certificate"></div>
+                    <div class="cert-body">
+                        <h3>Human Capital Staff Training</h3>
+                        <p>LKP-LPP Platinum Skills Indonesia</p>
+                        <span style="color:var(--accent-cyan); font-weight:700; font-size:0.8rem;">INSPECT CERTIFICATE ▹</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Showcase Matrix</div>
+                <h2 class="section-title">Project <span>Utama</span></h2>
+            </div>
+            <div class="project-grid" id="global-project-injector-grid">
+                </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Router Network</div>
+                <h2 class="section-title">Connect <span>Endpoints</span></h2>
+            </div>
+            <div class="contact-grid">
+                <div class="endpoint-list">
+                    <a href="https://www.linkedin.com/in/dimas-bayu-51307b2a2" target="_blank" class="glass-card endpoint-card">
+                        <div class="endpoint-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                        <div class="endpoint-info"><h4>LinkedIn Connection</h4><p>Dimas Bayu Saputro</p></div>
+                    </a>
+                    <a href="https://www.instagram.com/dimasbayusaputro_/" target="_blank" class="glass-card endpoint-card">
+                        <div class="endpoint-icon"><i class="fa-brands fa-instagram"></i></div>
+                        <div class="endpoint-info"><h4>Instagram Portal</h4><p>@dimasbayusaputro_</p></div>
+                    </a>
+                    <a href="https://wa.me/6285257916525" target="_blank" class="glass-card endpoint-card">
+                        <div class="endpoint-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div class="endpoint-info"><h4>WhatsApp Hotline</h4><p>+62 852-5791-6525</p></div>
+                    </a>
+                    <a href="mailto:dimasbayusaputroofficial@gmail.com" class="glass-card endpoint-card">
+                        <div class="endpoint-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="endpoint-info"><h4>Direct SMTP Mail</h4><p>dimasbayusaputroofficial@gmail.com</p></div>
+                    </a>
+                </div>
+                <div class="glass-card" style="text-align: center; padding: 40px 20px; display:flex; flex-direction:column; justify-content:center;">
+                    <h3 style="font-size:1.6rem; margin-bottom:15px; font-family:'Space Grotesk', sans-serif;">Let's Build Synergy</h3>
+                    <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:25px;">Siap berkolaborasi dalam pengelolaan sistem payroll profesional maupun eksekusi manajemen kompensasi korporasi lanjutan.</p>
+                    <a href="mailto:dimasbayusaputroofficial@gmail.com" class="btn btn-primary" style="width:100%; justify-content:center;"><i class="fa-solid fa-paper-plane"></i> Send Mail Dispatch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="prestige-lightbox-modal" onclick="closePrestigeModal()">
+        <div class="modal-container" onclick="event.stopPropagation()">
+            <span class="modal-close" onclick="closePrestigeModal()">&times;</span>
+            <div class="modal-screen"><img id="modal-screen-image" src="" alt="Dossier Inspection Frame"></div>
+            <div class="modal-details">
+                <h3 id="modal-details-title">Asset Dossier</h3>
+                <p id="modal-details-desc">Data parameter loading matrix info...</p>
+                <a href="#" id="modal-action-vault-link" target="_blank" class="btn btn-primary" style="width:100%; justify-content:center;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Buka File Cloud Drive Project</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Dimas Bayu Saputro. Engineered with Bento Premium Aesthetics.</p>
+        </div>
+    </footer>
+
+    <script>
+        /* --- DUAL DATABASE STRATIFICATION (HARDSKILL & SOFTSKILL) --- */
+        const databaseHardskills = [
+            { "name": "End-to-End Payroll Systems", "icon": "fa-calculator", "level": "EXPERT", "pct": 95, "desc": "Penguasaan total siklus bulanan penggajian karyawan. Terampil mengelola rekap absensi, perhitungan lembur otomatis, bonus proporsional, reimbursement, hingga penerbitan slip gaji resmi." },
+            { "name": "PPh 21 TER / Pasal 17", "icon": "fa-percent", "level": "EXPERT", "pct": 92, "desc": "Kalkulasi pemotongan pajak penghasilan karyawan berdasarkan Tarif Efektif Rata-rata (TER) terbaru sesuai regulasi PP No. 58/2023 serta penyesuaian perhitungan tahunan Pasal 17 UU HPP." },
+            { "name": "BPJS Kesehatan & Ketenagakerjaan", "icon": "fa-shield-heart", "level": "EXPERT", "pct": 95, "desc": "Manajemen data iuran jaminan sosial. Menguasai batas atas dan bawah rumus perhitungan wajib untuk program JHT, JP, JKK, JKM, serta iuran kepesertaan JKN Kesehatan secara valid." },
+            { "name": "Advanced Excel Formula Engine", "icon": "fa-file-excel", "level": "EXPERT", "pct": 96, "desc": "Otomasi spreadsheet tingkat tinggi menggunakan kombinasi logika VLOOKUP, XLOOKUP, INDEX MATCH, IFS bersarang, Pivot Tables, Conditional Formatting, Data Validation, serta Interactive Slicers Dashboard." },
+            { "name": "UU Ketenagakerjaan Compliance", "icon": "fa-scale-balanced", "level": "ADVANCED", "pct": 88, "desc": "Penerapan hukum tenaga kerja RI, termasuk regulasi turunan Perppu / UU Cipta Kerja terkait perhitungan kompensasi PKWT/PKWTT, tata cara perhitungan lembur nasional, dan skema pesangon PHK." }
+        ];
+
+        const databaseSoftskills = [
+            { "name": "Analytical Thinking", "icon": "fa-magnifying-glass-chart", "level": "EXPERT", "pct": 92, "desc": "Kemampuan memilah rekap data mentah absensi dan pos operasional payroll menjadi visualisasi metrik ringkas untuk dasar pengambilan keputusan strategis manajemen." },
+            { "name": "Strategic Communication", "icon": "fa-comments", "level": "ADVANCED", "pct": 85, "desc": "Keterampilan menjembatani komunikasi operasional antar divisi, mengelola komplain payroll secara profesional, serta mengurus berkas administrasi birokrasi pemerintahan sipil." },
+            { "name": "Problem Solving", "icon": "fa-puzzle-piece", "level": "EXPERT", "pct": 90, "desc": "Ketepatan mengidentifikasi anomali data absensi maupun perselisihan hitungan lembur secara objektif guna meminimalisir kesalahan pos anggaran keuangan perusahaan." }
+        ];
+
+        /* --- SKILLS MATRIX CORE LOGIC DISPATCHER --- */
+        function deploySkillsMatrixSystem() {
+            const hardRow = document.getElementById('hardskills-target-row');
+            const softRow = document.getElementById('softskills-target-row');
+            
+            hardRow.innerHTML = databaseHardskills.map((s, i) => `
+                <div class="skill-node-pill" onclick="inspectMatrixNode(this, ${i}, 'hard')"><i class="fa-solid ${s.icon}"></i> ${s.name}</div>
+            `).join('');
+
+            softRow.innerHTML = databaseSoftskills.map((s, i) => `
+                <div class="skill-node-pill" onclick="inspectMatrixNode(this, ${i}, 'soft')"><i class="fa-solid ${s.icon}"></i> ${s.name}</div>
+            `).join('');
+        }
+
+        function inspectMatrixNode(element, index, category) {
+            document.querySelectorAll('.skill-node-pill').forEach(p => p.classList.remove('active'));
+            element.classList.add('active');
+            
+            const selectedData = category === 'hard' ? databaseHardskills[index] : databaseSoftskills[index];
+            const parentWrapper = document.getElementById('global-inspector-wrapper');
+            
+            if(category === 'hard') {
+                parentWrapper.className = "glass-card inspector-panel-box hard";
+            } else {
+                parentWrapper.className = "glass-card inspector-panel-box soft";
+            }
+
+            document.getElementById('skills-empty-placeholder').style.display = 'none';
+            const inspectorNode = document.getElementById('skills-data-inspector-node');
+            inspectorNode.classList.remove('active');
+            
+            setTimeout(() => {
+                document.getElementById('panel-inspect-title').innerHTML = `<i class="fa-solid ${selectedData.icon}"></i> ${selectedData.name}`;
+                document.getElementById('panel-inspect-badge').innerText = selectedData.level;
+                document.getElementById('panel-inspect-desc').innerText = selectedData.desc;
+                inspectorNode.classList.add('active');
+                document.getElementById('panel-inspect-progress').style.width = selectedData.pct + '%';
+            }, 40);
+        }
+
+        /* --- BENTO GALLERY PROJECTS REPOSITORY SYSTEM --- */
+        const projectVaultRepository = [
+            {
+                "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",
+                "title": "1. Sertifikasi & Praktik Human Capital Staff",
+                "description": "Portofolio komprehensif penanganan administrasi SDM tingkat korporasi operasional berdasarkan standar kompetensi kerja nasional.",
+                "tags": ["Analisis Jabatan", "Perhitungan BPJS", "Penyusunan SOP", "Dokumen PKWT", "TNA"],
+                "driveLink": "https://drive.google.com/drive/folders/13uweCguimDLb2Ryi8BL4jZ761BWL6k4e?usp=drive_link",
+                "isInteractiveFolder": false
+            },
+            {
+                "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+                "title": "2. HR Payroll Specialist Program Mastery",
+                "description": "Penyelesaian studi kasus penggajian taktis end-to-end karyawan, penentuan kompensasi, pemotongan pajak, serta otomasi master berkas.",
+                "tags": ["SOP Payroll", "Gaji Prorata", "PPh 21 TER", "Struktur Upah", "Master Payroll"],
+                "driveLink": "https://drive.google.com/drive/folders/1q9R86xJGcmiK72TS4hW6K3QTp1NWgfRs?usp=sharing",
+                "isInteractiveFolder": false
+            },
+            {
+                "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+                "title": "3. Administrasi Data & Otomasi Spreadsheet Excel",
+                "description": "Portofolio implementasi pengolahan data modern terstruktur via mesin spreadsheet. Akses folder sub-project melalui tab interaktif di bawah:",
+                "tags": ["Vlookup/Xlookup", "Pivot Table", "Interactive Dashboard", "Rekap Absensi"],
+                "driveLink": "https://drive.google.com/drive/folders/1ugJ6AxoVNRlKsMFSPEtKJv9lGN8ViNx5?usp=drive_link",
+                "isInteractiveFolder": true,
+                "folders": [
+                    { "tabName": "P1: Relasional", "desc": "Penyusunan arsitektur database relasional otomatis memakai formula XLOOKUP/INDEX MATCH serta komparasi tabel via Pivot Table.", "link": "https://drive.google.com/drive/folders/1ugJ6AxoVNRlKsMFSPEtKJv9lGN8ViNx5?usp=drive_link" },
+                    { "tabName": "P2: Dashboard", "desc": "Pengembangan Visual Corporate Data Interactive Dashboard memanfaatkan Pivot Charts dan kontrol filter makro Slicers.", "link": "https://drive.google.com/drive/folders/1ugJ6AxoVNRlKsMFSPEtKJv9lGN8ViNx5?usp=drive_link" },
+                    { "tabName": "P3: Absensi", "desc": "Sistem rekap data absensi harian & bulanan karyawan otomatis terintegrasi untuk memasok input master payroll data.", "link": "https://drive.google.com/drive/folders/1ugJ6AxoVNRlKsMFSPEtKJv9lGN8ViNx5?usp=drive_link" }
+                ]
+            }
+        ];
+
+        function deployProjectBentoGrid() {
+            const grid = document.getElementById('global-project-injector-grid');
+            grid.innerHTML = projectVaultRepository.map((p, idx) => {
+                if(!p.isInteractiveFolder) {
+                    return `
+                        <div class="glass-card project-card">
+                            <div class="project-img-box"><img src="${p.image}" alt="Dimas Asset Framework"></div>
+                            <h3>${p.title}</h3>
+                            <p>${p.description}</p>
+                            <div class="project-tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+                            <a href="${p.driveLink}" target="_blank" class="btn btn-primary" style="margin-top:auto; font-size:0.85rem; justify-content:center;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Akses Berkas Drive</a>
+                        </div>
+                    `;
+                } else {
+                    return `
+                        <div class="glass-card project-card">
+                            <div class="project-img-box"><img src="${p.image}" alt="Dimas Asset Excel Spreadsheet Mastery"></div>
+                            <h3>${p.title}</h3>
+                            <p>${p.description}</p>
+                            
+                            <div class="bento-folder-box">
+                                <div class="folder-tabs-header">
+                                    <button class="folder-btn active" onclick="toggleBentoFolderTab(event, 'sub-tab-0-${idx}')">${p.folders[0].tabName}</button>
+                                    <button class="folder-btn" onclick="toggleBentoFolderTab(event, 'sub-tab-1-${idx}')">${p.folders[1].tabName}</button>
+                                    <button class="folder-btn" onclick="toggleBentoFolderTab(event, 'sub-tab-2-${idx}')">${p.folders[2].tabName}</button>
+                                </div>
+                                <div id="sub-tab-0-${idx}" class="folder-pane-view active">
+                                    <p style="font-size:0.78rem; margin-bottom:8px; color:var(--text-secondary);">${p.folders[0].desc}</p>
+                                    <a href="${p.folders[0].link}" target="_blank" style="color:var(--accent-cyan); font-size:0.75rem; font-weight:700; text-decoration:none;">Buka File Sub-Project <i class="fas fa-chevron-right"></i></a>
+                                </div>
+                                <div id="sub-tab-1-${idx}" class="folder-pane-view">
+                                    <p style="font-size:0.78rem; margin-bottom:8px; color:var(--text-secondary);">${p.folders[1].desc}</p>
+                                    <a href="${p.folders[1].link}" target="_blank" style="color:var(--accent-cyan); font-size:0.75rem; font-weight:700; text-decoration:none;">Buka File Sub-Project <i class="fas fa-chevron-right"></i></a>
+                                </div>
+                                <div id="sub-tab-2-${idx}" class="folder-pane-view">
+                                    <p style="font-size:0.78rem; margin-bottom:8px; color:var(--text-secondary);">${p.folders[2].desc}</p>
+                                    <a href="${p.folders[2].link}" target="_blank" style="color:var(--accent-cyan); font-size:0.75rem; font-weight:700; text-decoration:none;">Buka File Sub-Project <i class="fas fa-chevron-right"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="project-tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+                            <a href="${p.driveLink}" target="_blank" class="btn btn-secondary" style="margin-top:auto; font-size:0.85rem; justify-content:center;"><i class="fa-solid fa-folder-open"></i> Buka Induk Folder</a>
+                        </div>
+                    `;
+                }
+            }).join('');
+        }
+
+        function toggleBentoFolderTab(event, activePaneId) {
+            event.stopPropagation();
+            const folderWrapper = event.target.closest('.bento-folder-box');
+            folderWrapper.querySelectorAll('.folder-btn').forEach(b => b.classList.remove('active'));
+            folderWrapper.querySelectorAll('.folder-pane-view').forEach(p => p.classList.remove('active'));
+            
+            event.target.classList.add('active');
+            folderWrapper.querySelector(`#${activePaneId}`).classList.add('active');
+        }
+
+        /* --- WEB AUDIO API SYSTEM BACKGROUND MUSIC --- */
+        let browserAudioContext = null;
+        let ambientMusicOscillator = null;
+        let ambientMusicGainNode = null;
+        let isSystemMusicPlaying = false;
+
+        function toggleSystemMusicEngine() {
+            isSystemMusicPlaying = !isSystemMusicPlaying;
+            const deskIcon = document.getElementById('audio-icon-desk');
+            const mobIcon = document.getElementById('audio-icon-mob');
+            const stateClass = isSystemMusicPlaying ? 'fas fa-volume-high' : 'fas fa-volume-mute';
+            
+            if(deskIcon) deskIcon.className = stateClass;
+            if(mobIcon) mobIcon.className = stateClass;
+
+            if (isSystemMusicPlaying) {
+                if (!browserAudioContext) {
+                    browserAudioContext = new (window.AudioContext || window.webkitAudioContext)();
+                }
+                playAmbientSciFiMusic();
+            } else {
+                stopAmbientSciFiMusic();
+            }
+        }
+
+        function playAmbientSciFiMusic() {
+            try {
+                if (!browserAudioContext) return;
+                
+                ambientMusicOscillator = browserAudioContext.createOscillator();
+                ambientMusicGainNode = browserAudioContext.createGain();
+                
+                ambientMusicOscillator.type = 'sine';
+                // 85Hz Low ambient soothing loop frequency
+                ambientMusicOscillator.frequency.setValueAtTime(85, browserAudioContext.currentTime); 
+                
+                ambientMusicGainNode.gain.setValueAtTime(0.04, browserAudioContext.currentTime);
+                
+                ambientMusicOscillator.connect(ambientMusicGainNode);
+                ambientMusicGainNode.connect(browserAudioContext.destination);
+                
+                ambientMusicOscillator.start();
+            } catch(e) {}
+        }
+
+        function stopAmbientSciFiMusic() {
+            try {
+                if (ambientMusicOscillator) {
+                    ambientMusicOscillator.stop();
+                    ambientMusicOscillator.disconnect();
+                    ambientMusicOscillator = null;
+                }
+            } catch(e) {}
+        }
+
+        /* --- THEME INTERFACE SYSTEM LAYER --- */
+        function toggleInterfaceTheme() {
+            const rootBody = document.body;
+            const isDarkActive = rootBody.getAttribute('data-theme') === 'dark';
+            const targetMode = isDarkActive ? 'light' : 'dark';
+            rootBody.setAttribute('data-theme', targetMode);
+            
+            const interfaceIconClass = targetMode === 'light' ? 'fas fa-sun' : 'fas fa-moon';
+            document.getElementById('theme-icon-desk').className = interfaceIconClass;
+            document.getElementById('theme-icon-mob').className = interfaceIconClass;
+            
+            if (particleMaterial3D) {
+                particleMaterial3D.color.set(targetMode === 'light' ? '#2563eb' : '#00f5ff');
+            }
+        }
+
+        /* --- PRESTIGE LIGHTBOX MODALS LAYER --- */
+        const prestigeModalRef = document.getElementById('prestige-lightbox-modal');
+        function openPrestigeModal(img, title, desc, cloudLink) {
+            document.getElementById('modal-screen-image').src = img;
+            document.getElementById('modal-details-title').innerText = title;
+            document.getElementById('modal-details-desc').innerText = desc;
+            document.getElementById('modal-action-vault-link').href = cloudLink;
+            prestigeModalRef.classList.add('active');
+        }
+        function closePrestigeModal() { prestigeModalRef.classList.remove('active'); }
+
+        /* --- THREE.JS BACKGROUND CYBER MATRIX CONSTELLATION --- */
+        const scene3D = new THREE.Scene();
+        const camera3D = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 100);
+        const renderer3D = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+        renderer3D.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('webgl-container').appendChild(renderer3D.domElement);
+
+        const nodesCount3D = 130;
+        const geometry3D = new THREE.BufferGeometry();
+        const coordsArray3D = new Float32Array(nodesCount3D * 3);
+        for(let i=0; i<nodesCount3D*3; i++) { coordsArray3D[i] = (Math.random() - 0.5) * 12; }
+        geometry3D.setAttribute('position', new THREE.BufferAttribute(coordsArray3D, 3));
+
+        const particleMaterial3D = new THREE.PointsMaterial({ color: '#00f5ff', size: 0.045, transparent: true, opacity: 0.5 });
+        const particleField3D = new THREE.Points(geometry3D, particleMaterial3D);
+        scene3D.add(particleField3D);
+        camera3D.position.z = 5;
+
+        let trackingMouseX = 0, trackingMouseY = 0;
+        window.addEventListener('mousemove', (e) => {
+            trackingMouseX = (e.clientX / window.innerWidth) - 0.5;
+            trackingMouseY = (e.clientY / window.innerHeight) - 0.5;
+        });
+        window.addEventListener('resize', () => {
+            camera3D.aspect = window.innerWidth / window.innerHeight; camera3D.updateProjectionMatrix();
+            renderer3D.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        function renderSystemFrameLoop() {
+            requestAnimationFrame(renderSystemFrameLoop);
+            particleField3D.rotation.y += 0.0007;
+            particleField3D.position.x += (trackingMouseX * 0.2 - particleField3D.position.x) * 0.05;
+            particleField3D.position.y += (-trackingMouseY * 0.2 - particleField3D.position.y) * 0.05;
+            renderer3D.render(scene3D, camera3D);
+        }
+        renderSystemFrameLoop();
+
+        /* --- MONITOR ACTIVE SCROLL CONTROLLER --- */
+        window.addEventListener('scroll', () => {
+            const currentScrollTop = document.documentElement.scrollTop;
+            const currentScrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            document.getElementById('progress-bar').style.width = (currentScrollTop / currentScrollHeight) * 100 + '%';
+
+            let dynamicActiveSection = "";
+            document.querySelectorAll('section').forEach(sec => {
+                if (pageYOffset >= (sec.offsetTop - 150)) dynamicActiveSection = sec.getAttribute('id');
+            });
+            document.querySelectorAll('.nav-links a, .mobile-dock-btn').forEach(anchor => {
+                anchor.classList.remove('active');
+                if(anchor.getAttribute('href') === `#${dynamicActiveSection}`) anchor.classList.add('active');
+            });
+        });
+
+        // Initialize Core System Processes
+        deploySkillsMatrixSystem();
+        deployProjectBentoGrid();
+    </script>
+</body>
+</html>
