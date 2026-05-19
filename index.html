@@ -12,6 +12,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
+        /* --- KODE RESPONSIVE FRIENDLY (HP & LAPTOP) --- */
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Mencegah layar geser ke samping */
+}
+
+/* Pengaturan untuk Laptop/Desktop */
+@media (min-width: 1025px) {
+    .structural-container-fluid {
+        padding: 0 5% !important; /* Memberi ruang di kanan kiri */
+    }
+}
+
+/* Pengaturan untuk HP */
+@media (max-width: 768px) {
+    .structural-container-fluid {
+        padding: 0 1rem !important; 
+    }
+    
+    .hero-layout-split-grid {
+        flex-direction: column;
+        display: flex;
+    }
+}
         /* --- CORE CONFIGURATION & DESIGN SYSTEM TOKENS --- */
         :root {
             --bg-deep-space: #030306;
@@ -722,16 +753,19 @@
         }
 
         .biography-content-narrative {
-            flex: 0 0 65%;
+            flex: 1;
+            min-width: 0
         }
 
         .biography-statement-highlight {
             font-family: var(--font-serif-luxury);
-            font-size: 44px;
+            font-size: 36px;
             font-weight: 500;
             line-height: 1.25;
             margin-bottom: 2rem;
             color: var(--text-premium-cream);
+            max-width: 100%;            /* Tambahkan ini */
+             word-wrap: break-word;      /* Tambahkan ini */
         }
 
         .biography-detailed-exposition {
@@ -1552,7 +1586,7 @@
                 <li><a href="#certifications" class="nav-interactive-anchor">Sertifikasi</a></li>
                 <li><a href="#chronology" class="nav-interactive-anchor">Pengalaman Kerja</a></li>
                 <li><a href="#contact" class="nav-interactive-anchor">Hubungi</a></li>
-                <li><a href="https://drive.google.com/drive/folders/13uweCguimDLb2Ryi8BL4jZ761BWL6k4e?usp=drive_link" target="_blank" class="button-download-cv-premium">Unduh CV Resmi</a></li>
+                <li><a href="https://drive.google.com/drive/folders/1luyYEceg9RRiMxB6a6GZ6rzN_Z12hxqx?usp=sharing" target="_blank" class="button-download-cv-premium">Unduh CV Resmi</a></li>
             </ul>
 
             <button class="hamburger-menu-trigger" id="hamburger-menu-trigger">
