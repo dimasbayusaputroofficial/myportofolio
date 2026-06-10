@@ -3,84 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dimas Bayu Saputro | Senior HR & Payroll Specialist Portofolio</title>
-    
+
+    <!-- ✅ IMPROVEMENT 1: Meta SEO lengkap -->
+    <title>Dimas Bayu Saputro | HR & Payroll Enthusiast | BNSP Certified</title>
+    <meta name="description" content="Portofolio profesional Dimas Bayu Saputro — HR & Payroll Enthusiast bersertifikat BNSP. Spesialisasi administrasi penggajian, PPh 21 TER, BPJS, hukum ketenagakerjaan, dan analisis data SDM.">
+    <meta name="keywords" content="HR Specialist, Payroll Specialist, BNSP, SDM, Penggajian, PPh 21, BPJS, Ketenagakerjaan, Surabaya, Jawa Timur">
+    <meta name="author" content="Dimas Bayu Saputro">
+    <meta name="robots" content="index, follow">
+
+    <!-- ✅ Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dimas Bayu Saputro | HR & Payroll Enthusiast">
+    <meta property="og:description" content="Profesional HR bersertifikat BNSP — spesialisasi administrasi payroll, PPh 21 TER, hukum ketenagakerjaan, dan pengelolaan SDM korporasi.">
+    <meta property="og:image" content="https://dimasbayusaputroofficial.github.io/myportofolio/fotoformaldimasbayusaputro.png">
+    <meta property="og:url" content="https://dimasbayusaputroofficial.github.io/myportofolio/">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- ✅ Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dimas Bayu Saputro | HR & Payroll Enthusiast">
+    <meta name="twitter:description" content="Profesional HR bersertifikat BNSP — spesialisasi payroll, PPh 21, dan SDM korporasi.">
+    <meta name="twitter:image" content="https://dimasbayusaputroofficial.github.io/myportofolio/fotoformaldimasbayusaputro.png">
+
+    <!-- ✅ Canonical URL -->
+    <link rel="canonical" href="https://dimasbayusaputroofficial.github.io/myportofolio/">
+
+    <!-- ✅ Favicon SVG inline -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23030306'/><text y='.9em' font-size='70' x='10' fill='%23C9A96E' font-family='serif' font-weight='600'>D</text></svg>">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:ital,wght@0,100;0,300;0,400;0,500;1,100&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* --- KODE RESPONSIVE FRIENDLY (HP & LAPTOP) --- */
-* {
-    box-sizing: border-box;
-    max-width: 100%;
-}
-
-html, body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Mencegah layar geser ke samping */
-}
-
-/* Pengaturan untuk Laptop/Desktop */
-@media (min-width: 1025px) {
-    .structural-container-fluid {
-        padding: 0 5% !important; /* Memberi ruang di kanan kiri */
-    }
-}
-
-/* Pengaturan untuk HP */
-@media (max-width: 768px) {
-    .structural-container-fluid {
-        padding: 0 1rem !important; 
-    }
-    
-    .hero-layout-split-grid {
-        flex-direction: column;
-        display: flex;
-    }
-}
-        /* --- CORE CONFIGURATION & DESIGN SYSTEM TOKENS --- */
-        :root {
-            --bg-deep-space: #030306;
-            --bg-cosmic-void: #06060c;
-            --surface-glass-alpha: rgba(10, 10, 18, 0.45);
-            --surface-glass-beta: rgba(16, 16, 28, 0.75);
-            --surface-elevated-element: #0e0e17;
-            --surface-tooltips: #141424;
-            
-            --accent-gold-royal: #C9A96E;
-            --accent-gold-luminescent: #F3DCA2;
-            --accent-gold-muted: #8E7443;
-            
-            --accent-blue-cyber: #2A69AC;
-            --accent-blue-electric: #4A90E2;
-            --accent-blue-deep: #12284C;
-            --accent-blue-glow: rgba(74, 144, 226, 0.35);
-            
-            --text-ultra-white: #FFFFFF;
-            --text-premium-cream: #F5F2EB;
-            --text-platinum-gray: #D1D1DB;
-            --text-cosmic-muted: #71718A;
-            --text-dark-void: #020204;
-            
-            --border-exquisite-glow: rgba(201, 169, 110, 0.12);
-            --border-exquisite-hover: rgba(201, 169, 110, 0.4);
-            --border-cyber-glow: rgba(74, 144, 226, 0.15);
-            --border-cyber-hover: rgba(74, 144, 226, 0.45);
-            
-            --font-serif-luxury: 'Cormorant Garamond', serif;
-            --font-sans-interface: 'Outfit', sans-serif;
-            --font-mono-data: 'JetBrains Mono', monospace;
-            
-            --transition-epic-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-            --transition-snappy: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        /* ✅ IMPROVEMENT 2: Reduced Motion support */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.2s !important;
+            }
         }
 
-        /* --- GLOBAL RESET & BASE ARCHITECTURE --- */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -89,11 +53,18 @@ html, body {
             -webkit-tap-highlight-color: transparent;
         }
 
+        /* ✅ IMPROVEMENT 3: Keyboard focus visible untuk aksesibilitas */
+        *:focus-visible {
+            outline: 2px solid #C9A96E;
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
+
         html {
             scroll-behavior: smooth;
-            background-color: var(--bg-deep-space);
-            color: var(--text-premium-cream);
-            font-family: var(--font-sans-interface);
+            background-color: #030306;
+            color: #F5F2EB;
+            font-family: 'Outfit', sans-serif;
             overflow-x: hidden;
             font-size: 16px;
             text-rendering: optimizeLegibility;
@@ -106,13 +77,37 @@ html, body {
             overflow-x: hidden;
         }
 
-        /* --- ADVANCED BACKGROUND KINETIC ENGINE --- */
+        :root {
+            --bg-deep-space: #030306;
+            --bg-cosmic-void: #06060c;
+            --surface-glass-alpha: rgba(10, 10, 18, 0.45);
+            --surface-glass-beta: rgba(16, 16, 28, 0.75);
+            --surface-elevated-element: #0e0e17;
+            --accent-gold-royal: #C9A96E;
+            --accent-gold-luminescent: #F3DCA2;
+            --accent-gold-muted: #8E7443;
+            --accent-blue-cyber: #2A69AC;
+            --accent-blue-electric: #4A90E2;
+            --text-ultra-white: #FFFFFF;
+            --text-premium-cream: #F5F2EB;
+            --text-platinum-gray: #D1D1DB;
+            --text-cosmic-muted: #71718A;
+            --text-dark-void: #020204;
+            --border-exquisite-glow: rgba(201, 169, 110, 0.12);
+            --border-exquisite-hover: rgba(201, 169, 110, 0.4);
+            --border-cyber-glow: rgba(74, 144, 226, 0.15);
+            --font-serif-luxury: 'Cormorant Garamond', serif;
+            --font-sans-interface: 'Outfit', sans-serif;
+            --font-mono-data: 'JetBrains Mono', monospace;
+            --transition-epic-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-snappy: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        /* --- BACKGROUND --- */
         .kinetic-background-container {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
             z-index: -10;
             overflow: hidden;
             background: linear-gradient(180deg, var(--bg-deep-space) 0%, var(--bg-cosmic-void) 100%);
@@ -120,10 +115,8 @@ html, body {
 
         .ambient-mesh-glow-1 {
             position: absolute;
-            top: -20%;
-            left: -10%;
-            width: 80vw;
-            height: 80vh;
+            top: -20%; left: -10%;
+            width: 80vw; height: 80vh;
             background: radial-gradient(circle, rgba(201, 169, 110, 0.05) 0%, transparent 70%);
             filter: blur(100px);
             animation: meshFloating1 20s ease-in-out infinite alternate;
@@ -132,10 +125,8 @@ html, body {
 
         .ambient-mesh-glow-2 {
             position: absolute;
-            bottom: -15%;
-            right: -5%;
-            width: 75vw;
-            height: 75vh;
+            bottom: -15%; right: -5%;
+            width: 75vw; height: 75vh;
             background: radial-gradient(circle, rgba(42, 105, 172, 0.07) 0%, transparent 65%);
             filter: blur(120px);
             animation: meshFloating2 25s ease-in-out infinite alternate;
@@ -144,10 +135,8 @@ html, body {
 
         .ambient-mesh-glow-3 {
             position: absolute;
-            top: 40%;
-            left: 50%;
-            width: 50vw;
-            height: 50vh;
+            top: 40%; left: 50%;
+            width: 50vw; height: 50vh;
             background: radial-gradient(circle, rgba(201, 169, 110, 0.03) 0%, transparent 60%);
             filter: blur(90px);
             animation: meshFloating1 15s ease-in-out infinite alternate-reverse;
@@ -156,10 +145,8 @@ html, body {
 
         .digital-grain-overlay {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             z-index: -9;
             opacity: 0.025;
             pointer-events: none;
@@ -178,11 +165,10 @@ html, body {
             100% { transform: translate(40px, 30px) rotate(360deg) scale(1.15); }
         }
 
-        /* --- PRECISED INTERACTIVE ELEMENT SPECIFICATIONS --- */
+        /* --- UI ELEMENTS --- */
         #dynamic-scroll-tracker {
             position: fixed;
-            top: 0;
-            left: 0;
+            top: 0; left: 0;
             height: 3px;
             background: linear-gradient(90deg, var(--accent-gold-royal) 0%, var(--accent-blue-electric) 50%, var(--accent-gold-luminescent) 100%);
             z-index: 2500;
@@ -192,8 +178,7 @@ html, body {
         }
 
         #luxury-cursor-core {
-            width: 6px;
-            height: 6px;
+            width: 6px; height: 6px;
             background: var(--text-ultra-white);
             border-radius: 50%;
             position: fixed;
@@ -205,8 +190,7 @@ html, body {
         }
 
         #luxury-cursor-aura {
-            width: 26px;
-            height: 26px;
+            width: 26px; height: 26px;
             border: 1px solid var(--accent-gold-royal);
             border-radius: 50%;
             position: fixed;
@@ -218,23 +202,20 @@ html, body {
         }
 
         #luxury-cursor-aura.magnetic-expand {
-            width: 48px;
-            height: 48px;
+            width: 48px; height: 48px;
             background-color: rgba(201, 169, 110, 0.05);
             border-color: var(--accent-gold-luminescent);
             box-shadow: 0 0 20px rgba(201, 169, 110, 0.3);
         }
 
-        /* --- REUSABLE STRUCTURAL UTILITIES --- */
+        /* --- LAYOUT --- */
         .structural-container {
             max-width: 1280px;
             margin: 0 auto;
             padding: 0 3rem;
         }
 
-        .master-section-spacing {
-            padding: 9.5rem 0;
-        }
+        .master-section-spacing { padding: 9.5rem 0; }
 
         .architectural-header {
             display: flex;
@@ -259,8 +240,7 @@ html, body {
         .architectural-subtitle-meta::after {
             content: '';
             display: inline-block;
-            width: 60px;
-            height: 1px;
+            width: 60px; height: 1px;
             background: linear-gradient(90deg, var(--accent-gold-royal), transparent);
         }
 
@@ -284,7 +264,7 @@ html, body {
             transform: translateY(0);
         }
 
-        /* --- HIGHEST SPEC GLASSMORPHISM COMPONENT --- */
+        /* --- GLASSMORPHISM --- */
         .glassmorphism-luxury-card {
             background: var(--surface-glass-alpha);
             backdrop-filter: blur(20px);
@@ -300,10 +280,8 @@ html, body {
         .glassmorphism-luxury-card::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, transparent 100%);
             pointer-events: none;
             transition: var(--transition-epic-smooth);
@@ -315,15 +293,12 @@ html, body {
             box-shadow: 0 30px 65px rgba(201, 169, 110, 0.1);
         }
 
-        .glassmorphism-luxury-card:hover::before {
-            opacity: 0.5;
-        }
+        .glassmorphism-luxury-card:hover::before { opacity: 0.5; }
 
-        /* --- EXECUTIVE NAVIGATION BAR --- */
+        /* --- NAVIGATION --- */
         .executive-navigation {
             position: fixed;
-            top: 0;
-            width: 100%;
+            top: 0; width: 100%;
             z-index: 2000;
             background: rgba(3, 3, 6, 0.75);
             backdrop-filter: blur(30px);
@@ -358,12 +333,10 @@ html, body {
             font-weight: 600;
             color: var(--accent-gold-royal);
             letter-spacing: 0.05em;
-            position: relative;
         }
 
         .brand-monogram-separator {
-            width: 1px;
-            height: 28px;
+            width: 1px; height: 28px;
             background: linear-gradient(to bottom, transparent, rgba(201,169,110,0.3), transparent);
         }
 
@@ -393,25 +366,19 @@ html, body {
             transition: var(--transition-snappy);
         }
 
-        .nav-interactive-anchor:hover {
-            color: var(--accent-gold-luminescent);
-        }
+        .nav-interactive-anchor:hover { color: var(--accent-gold-luminescent); }
 
         .nav-interactive-anchor::after {
             content: '';
             position: absolute;
-            bottom: -6px;
-            left: 50%;
-            width: 0;
-            height: 1px;
+            bottom: -6px; left: 50%;
+            width: 0; height: 1px;
             background: var(--accent-gold-royal);
             transition: var(--transition-snappy);
             transform: translateX(-50%);
         }
 
-        .nav-interactive-anchor:hover::after {
-            width: 100%;
-        }
+        .nav-interactive-anchor:hover::after { width: 100%; }
 
         .button-download-cv-premium {
             border: 1px solid var(--accent-gold-royal);
@@ -427,6 +394,7 @@ html, body {
             cursor: pointer;
             text-decoration: none;
             transition: var(--transition-snappy);
+            display: inline-block;
         }
 
         .button-download-cv-premium:hover {
@@ -443,16 +411,28 @@ html, body {
             cursor: pointer;
             background: none;
             border: none;
+            padding: 8px;
         }
 
         .hamburger-menu-trigger span {
-            width: 26px;
-            height: 1.5px;
+            width: 26px; height: 1.5px;
             background: var(--accent-gold-royal);
             transition: var(--transition-snappy);
+            display: block;
         }
 
-        /* --- EXECUTIVE HERO HERO DYNAMICS --- */
+        /* ✅ IMPROVEMENT 4: Hamburger animasi saat aktif */
+        .hamburger-menu-trigger.active-open-state span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger-menu-trigger.active-open-state span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger-menu-trigger.active-open-state span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* --- HERO --- */
         .hero-masterwork {
             min-height: 100vh;
             display: flex;
@@ -469,9 +449,7 @@ html, body {
             width: 100%;
         }
 
-        .hero-left-intelligence {
-            flex: 0 0 55%;
-        }
+        .hero-left-intelligence { flex: 0 0 55%; }
 
         .hero-badge-announcement {
             font-family: var(--font-mono-data);
@@ -487,8 +465,7 @@ html, body {
 
         .hero-badge-announcement::before {
             content: '';
-            width: 40px;
-            height: 1px;
+            width: 40px; height: 1px;
             background: var(--accent-gold-royal);
         }
 
@@ -574,7 +551,7 @@ html, body {
             transform: translateY(-2px);
         }
 
-        /* PREMIUM AVATAR GEOMETRY SCULPTURE */
+        /* AVATAR SCULPTURE */
         .hero-right-visual-sculpture {
             flex: 0 0 40%;
             display: flex;
@@ -584,14 +561,12 @@ html, body {
 
         .sculpture-photo-wrapper {
             position: relative;
-            width: 390px;
-            height: 390px;
+            width: 390px; height: 390px;
             z-index: 10;
         }
 
         .sculpture-circle-mask {
-            width: 100%;
-            height: 100%;
+            width: 100%; height: 100%;
             border-radius: 50%;
             overflow: hidden;
             position: relative;
@@ -602,50 +577,39 @@ html, body {
         .sculpture-circle-mask::after {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background: linear-gradient(to bottom, transparent, rgba(3, 3, 6, 0.2));
             pointer-events: none;
         }
 
         .sculpture-main-image {
-            width: 100%;
-            height: 100%;
+            width: 100%; height: 100%;
             object-fit: cover;
             transform: scale(1.01);
             transition: var(--transition-epic-smooth);
         }
 
-        .sculpture-photo-wrapper:hover .sculpture-main-image {
-            transform: scale(1.05);
-        }
+        .sculpture-photo-wrapper:hover .sculpture-main-image { transform: scale(1.05); }
 
-        /* Complex Orbit Mechanisms */
         .sculpture-astronomy-ring {
             position: absolute;
-            top: 50%;
-            left: 50%;
+            top: 50%; left: 50%;
             border-radius: 50%;
             transform-style: preserve-3d;
             pointer-events: none;
         }
 
         .astronomy-ring-alpha {
-            width: 470px;
-            height: 470px;
-            margin-top: -235px;
-            margin-left: -235px;
+            width: 470px; height: 470px;
+            margin-top: -235px; margin-left: -235px;
             border: 1px dashed rgba(201, 169, 110, 0.2);
             animation: technicalRotationClockwise 40s linear infinite;
         }
 
         .astronomy-ring-beta {
-            width: 440px;
-            height: 440px;
-            margin-top: -220px;
-            margin-left: -220px;
+            width: 440px; height: 440px;
+            margin-top: -220px; margin-left: -220px;
             border: 1px solid rgba(74, 144, 226, 0.15);
             animation: technicalRotationCounterClockwise 30s linear infinite;
         }
@@ -660,7 +624,7 @@ html, body {
             100% { transform: rotate(-360deg); }
         }
 
-        /* Executive Enterprise Statistics Panel */
+        /* STATISTICS PANEL */
         .enterprise-statistics-panel {
             display: flex;
             justify-content: space-between;
@@ -678,10 +642,8 @@ html, body {
         .enterprise-statistics-panel::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background: linear-gradient(90deg, transparent, rgba(201,169,110,0.02), transparent);
             pointer-events: none;
         }
@@ -695,13 +657,12 @@ html, body {
             position: relative;
         }
 
+        /* ✅ IMPROVEMENT 5: Fix divider mobile — default vertical, horizontal only desktop */
         .statistic-node-item:not(:last-child)::after {
             content: '';
             position: absolute;
-            right: 0;
-            top: 15%;
-            height: 70%;
-            width: 1px;
+            right: 0; top: 15%;
+            height: 70%; width: 1px;
             background: linear-gradient(to bottom, transparent, rgba(201,169,110,0.15), transparent);
         }
 
@@ -721,16 +682,14 @@ html, body {
             font-weight: 500;
         }
 
-        /* --- THE BIOGRAPHY ARCHITECTURE (TENTANG SAYA) --- */
+        /* --- BIOGRAPHY --- */
         .biography-grid-layout {
             display: flex;
             gap: 6rem;
             align-items: center;
         }
 
-        .biography-visual-anchor {
-            flex: 0 0 35%;
-        }
+        .biography-visual-anchor { flex: 0 0 35%; }
 
         .biography-image-canvas {
             border-radius: 12px;
@@ -742,19 +701,16 @@ html, body {
         }
 
         .biography-native-image {
-            width: 100%;
-            height: 100%;
+            width: 100%; height: 100%;
             object-fit: cover;
             transition: var(--transition-epic-smooth);
         }
 
-        .biography-image-canvas:hover .biography-native-image {
-            transform: scale(1.04);
-        }
+        .biography-image-canvas:hover .biography-native-image { transform: scale(1.04); }
 
         .biography-content-narrative {
             flex: 1;
-            min-width: 0
+            min-width: 0;
         }
 
         .biography-statement-highlight {
@@ -764,8 +720,8 @@ html, body {
             line-height: 1.25;
             margin-bottom: 2rem;
             color: var(--text-premium-cream);
-            max-width: 100%;            /* Tambahkan ini */
-             word-wrap: break-word;      /* Tambahkan ini */
+            max-width: 100%;
+            word-wrap: break-word;
         }
 
         .biography-detailed-exposition {
@@ -783,10 +739,7 @@ html, body {
             gap: 1.25rem;
         }
 
-        .biography-miniature-capsule {
-            padding: 1.5rem;
-            text-align: left;
-        }
+        .biography-miniature-capsule { padding: 1.5rem; text-align: left; }
 
         .biography-miniature-capsule .capsule-icon-element {
             font-size: 20px;
@@ -808,7 +761,7 @@ html, body {
             line-height: 1.4;
         }
 
-        /* --- HARDSKILLS & COMPETENCY MATRIX --- */
+        /* --- COMPETENCY --- */
         .competency-dual-matrix-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -826,10 +779,7 @@ html, body {
             letter-spacing: 0.02em;
         }
 
-        .competency-column-header i {
-            color: var(--accent-gold-royal);
-            font-size: 15px;
-        }
+        .competency-column-header i { color: var(--accent-gold-royal); font-size: 15px; }
 
         .competency-bars-stack {
             display: flex;
@@ -848,6 +798,7 @@ html, body {
             justify-content: space-between;
             font-size: 13.5px;
             letter-spacing: 0.02em;
+            align-items: center;
         }
 
         .competency-string-name {
@@ -855,10 +806,34 @@ html, body {
             font-weight: 400;
         }
 
-        .competency-numeric-percentage {
+        /* ✅ IMPROVEMENT 6: Level badge menggantikan persentase angka mentah */
+        .competency-level-badge {
             font-family: var(--font-mono-data);
-            color: var(--accent-gold-royal);
+            font-size: 10px;
             font-weight: 400;
+            letter-spacing: 0.08em;
+            padding: 0.2rem 0.65rem;
+            border-radius: 30px;
+            border: 1px solid;
+            white-space: nowrap;
+        }
+
+        .level-expert {
+            color: #C9A96E;
+            border-color: rgba(201, 169, 110, 0.35);
+            background: rgba(201, 169, 110, 0.06);
+        }
+
+        .level-proficient {
+            color: #4A90E2;
+            border-color: rgba(74, 144, 226, 0.35);
+            background: rgba(74, 144, 226, 0.06);
+        }
+
+        .level-competent {
+            color: #71718A;
+            border-color: rgba(113, 113, 138, 0.35);
+            background: rgba(113, 113, 138, 0.06);
         }
 
         .competency-bar-track-bg {
@@ -866,7 +841,6 @@ html, body {
             background: rgba(255, 255, 255, 0.03);
             border-radius: 20px;
             overflow: hidden;
-            position: relative;
         }
 
         .competency-bar-fill-interactive {
@@ -902,11 +876,13 @@ html, body {
             box-shadow: 0 5px 15px rgba(201, 169, 110, 0.2);
         }
 
+        /* ✅ IMPROVEMENT 7: payroll box grid-column fix */
         .payroll-operations-ecosystem-box {
-            grid-column: span 2;
             margin-top: 4.5rem;
             padding: 2.5rem;
             border: 1px solid rgba(74, 144, 226, 0.1);
+            border-radius: 16px;
+            background: var(--surface-glass-alpha);
         }
 
         .payroll-ecosystem-title {
@@ -919,9 +895,7 @@ html, body {
             margin-bottom: 1.5rem;
         }
 
-        .payroll-ecosystem-title i {
-            color: var(--accent-blue-electric);
-        }
+        .payroll-ecosystem-title i { color: var(--accent-blue-electric); }
 
         .payroll-tags-cloud {
             display: flex;
@@ -931,7 +905,6 @@ html, body {
 
         .payroll-tag-element {
             font-size: 12px;
-            font-family: var(--font-sans-interface);
             background: rgba(42, 105, 172, 0.08);
             border: 1px solid rgba(74, 144, 226, 0.15);
             color: #B5D2F6;
@@ -946,7 +919,7 @@ html, body {
             color: var(--text-ultra-white);
         }
 
-        /* --- THE ENTERPRISE PROJECTS MATRIX --- */
+        /* --- PROJECTS --- */
         .projects-architectural-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -1039,7 +1012,7 @@ html, body {
             transform: translateX(6px);
         }
 
-        /* --- SYSTEM OF COMPETENCY CERTIFICATIONS --- */
+        /* --- CERTIFICATIONS --- */
         .certifications-architectural-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -1061,18 +1034,35 @@ html, body {
             border: 1px solid rgba(255,255,255,0.04);
             background: #07070c;
             position: relative;
+            cursor: pointer;
         }
 
+        /* ✅ IMPROVEMENT 8: Hover overlay hint untuk image preview */
+        .certification-image-frame-container::after {
+            content: 'Klik untuk pratinjau';
+            position: absolute;
+            inset: 0;
+            background: rgba(3, 3, 6, 0.6);
+            color: var(--accent-gold-luminescent);
+            font-family: var(--font-mono-data);
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .certification-image-frame-container:hover::after { opacity: 1; }
+
         .certification-thumbnail-image {
-            width: 100%;
-            height: 100%;
+            width: 100%; height: 100%;
             object-fit: cover;
             transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .certification-glass-card-node:hover .certification-thumbnail-image {
-            transform: scale(1.06);
-        }
+        .certification-glass-card-node:hover .certification-thumbnail-image { transform: scale(1.06); }
 
         .certification-card-divider {
             height: 1px;
@@ -1125,19 +1115,15 @@ html, body {
             transition: var(--transition-snappy);
         }
 
-        .trigger-lightbox-button:hover {
-            color: var(--text-ultra-white);
-        }
+        .trigger-lightbox-button:hover { color: var(--text-ultra-white); }
 
         .anchor-external-drive-sertifikat {
             color: var(--accent-gold-luminescent);
         }
 
-        .anchor-external-drive-sertifikat:hover {
-            color: var(--text-ultra-white);
-        }
+        .anchor-external-drive-sertifikat:hover { color: var(--text-ultra-white); }
 
-        /* --- THE TIMELINE OF CHRONOLOGICAL EXPERIENCE --- */
+        /* --- TIMELINE --- */
         .timeline-editorial-disclaimer {
             font-size: 13.5px;
             font-style: italic;
@@ -1157,10 +1143,8 @@ html, body {
         .chronological-timeline-backbone::before {
             content: '';
             position: absolute;
-            left: 50%;
-            top: 0;
-            width: 1px;
-            height: 100%;
+            left: 50%; top: 0;
+            width: 1px; height: 100%;
             background: linear-gradient(to bottom, var(--accent-gold-royal) 0%, var(--accent-blue-cyber) 100%);
             transform: translateX(-50%);
         }
@@ -1173,16 +1157,12 @@ html, body {
             position: relative;
         }
 
-        .timeline-individual-block:nth-child(even) {
-            flex-direction: row-reverse;
-        }
+        .timeline-individual-block:nth-child(even) { flex-direction: row-reverse; }
 
         .timeline-core-node {
             position: absolute;
-            left: 50%;
-            top: 28px;
-            width: 12px;
-            height: 12px;
+            left: 50%; top: 28px;
+            width: 12px; height: 12px;
             background: var(--bg-deep-space);
             border: 2px solid var(--accent-gold-royal);
             border-radius: 50%;
@@ -1257,12 +1237,11 @@ html, body {
             left: 0;
         }
 
-        /* --- INTERACTIVE DIGITAL CONTACT CHANNELS --- */
+        /* --- CONTACT --- */
         .contact-communications-matrix-layout {
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
             gap: 5rem;
-            position: relative;
         }
 
         .contact-manifesto-left h2 {
@@ -1325,8 +1304,7 @@ html, body {
         }
 
         .contact-icon-matrix-shield {
-            width: 48px;
-            height: 48px;
+            width: 48px; height: 48px;
             border-radius: 8px;
             background: rgba(255,255,255,0.01);
             border: 1px solid rgba(201, 169, 110, 0.15);
@@ -1336,6 +1314,7 @@ html, body {
             color: var(--accent-gold-royal);
             font-size: 17px;
             transition: var(--transition-snappy);
+            flex-shrink: 0;
         }
 
         .contact-hyperlink-card-node:hover .contact-icon-matrix-shield {
@@ -1357,13 +1336,14 @@ html, body {
             font-size: 14.5px;
             color: var(--text-premium-cream);
             font-weight: 400;
+            word-break: break-all;
         }
 
         .contact-hyperlink-card-node:hover .contact-meta-data-strings p {
             color: var(--accent-gold-luminescent);
         }
 
-        /* --- MONUMENTAL SYSTEM FOOTER --- */
+        /* --- FOOTER --- */
         .monumental-footer {
             border-top: 1px solid rgba(255, 255, 255, 0.02);
             padding: 3rem 0;
@@ -1376,13 +1356,47 @@ html, body {
             letter-spacing: 0.08em;
         }
 
-        /* --- THE SYSTEM CINEMATIC MODAL OVERLAY --- */
+        /* ✅ IMPROVEMENT 9: Back to Top Button */
+        #back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 44px; height: 44px;
+            background: rgba(10, 10, 18, 0.8);
+            border: 1px solid rgba(201, 169, 110, 0.3);
+            border-radius: 50%;
+            color: var(--accent-gold-royal);
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(10px);
+            pointer-events: none;
+            text-decoration: none;
+            backdrop-filter: blur(10px);
+        }
+
+        #back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        #back-to-top:hover {
+            background: var(--accent-gold-royal);
+            color: var(--text-dark-void);
+            box-shadow: 0 0 20px rgba(201, 169, 110, 0.4);
+        }
+
+        /* --- LIGHTBOX --- */
         .lightbox-system-overlay {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background: rgba(2, 2, 4, 0.94);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
@@ -1405,8 +1419,7 @@ html, body {
             background: #09090f;
             border: 1px solid var(--border-exquisite-hover);
             border-radius: 16px;
-            max-width: 760px;
-            width: 100%;
+            max-width: 760px; width: 100%;
             position: relative;
             transform: scale(0.92);
             opacity: 0;
@@ -1422,13 +1435,11 @@ html, body {
 
         #lightbox-close-sentinel {
             position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
+            top: 1.5rem; right: 1.5rem;
             background: rgba(255,255,255,0.03);
             border: none;
             color: var(--text-premium-cream);
-            width: 36px;
-            height: 36px;
+            width: 36px; height: 36px;
             border-radius: 50%;
             cursor: pointer;
             display: flex;
@@ -1474,12 +1485,32 @@ html, body {
             font-weight: 500;
         }
 
-        /* --- EXHAUSTIVE DISCREPANCY RESPONSIVE VIEWPORTS --- */
+        /* ✅ IMPROVEMENT 10: Skip to content untuk aksesibilitas keyboard */
+        .skip-to-content {
+            position: fixed;
+            top: -100px; left: 1rem;
+            background: var(--accent-gold-royal);
+            color: var(--text-dark-void);
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            z-index: 9999;
+            text-decoration: none;
+            transition: top 0.2s;
+        }
+
+        .skip-to-content:focus {
+            top: 1rem;
+        }
+
+        /* --- RESPONSIVE --- */
         @media (max-width: 1024px) {
             .hero-monumental-heading { font-size: 60px; }
             .hero-split-matrix { gap: 3rem; }
             .projects-architectural-grid, .certifications-architectural-grid { grid-template-columns: repeat(2, 1fr); }
-            .competency-dual-matrix-grid, .biography-grid-layout, .contact-communications-matrix-layout { gap: 3.5rem; }
+            .competency-dual-matrix-grid { gap: 3.5rem; }
+            .biography-grid-layout { gap: 3.5rem; }
+            .contact-communications-matrix-layout { gap: 3.5rem; }
             .biography-capsule-grid { grid-template-columns: 1fr; }
         }
 
@@ -1487,14 +1518,12 @@ html, body {
             #luxury-cursor-core, #luxury-cursor-aura { display: none !important; }
             .master-section-spacing { padding: 6rem 0; }
             .structural-container { padding: 0 1.75rem; }
-            
+
             .hamburger-menu-trigger { display: flex; }
             .nav-link-architecture-list {
                 position: fixed;
-                top: 90px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 90px);
+                top: 90px; left: -100%;
+                width: 100%; height: calc(100vh - 90px);
                 background: rgba(4, 4, 8, 0.98);
                 backdrop-filter: blur(25px);
                 -webkit-backdrop-filter: blur(25px);
@@ -1525,27 +1554,35 @@ html, body {
             .astronomy-ring-alpha { width: 340px; height: 340px; margin-top: -170px; margin-left: -170px; }
             .astronomy-ring-beta { width: 320px; height: 320px; margin-top: -160px; margin-left: -160px; }
 
+            /* ✅ IMPROVEMENT 5 (mobile stats panel fix): Proper horizontal divider */
             .enterprise-statistics-panel {
                 flex-direction: column;
-                gap: 2rem;
-                padding: 2rem;
+                gap: 0;
+                padding: 1.75rem;
             }
+
+            .statistic-node-item {
+                width: 100%;
+                padding: 1.5rem 0;
+            }
+
             .statistic-node-item:not(:last-child)::after {
-                border-right: none;
-                border-bottom: 1px solid rgba(201, 169, 110, 0.12);
-                padding-bottom: 1.5rem;
-                width: 80%;
-                left: 10%;
+                right: auto;
                 top: auto;
                 bottom: 0;
+                left: 10%;
+                width: 80%;
+                height: 1px;
+                background: linear-gradient(to right, transparent, rgba(201,169,110,0.15), transparent);
             }
 
             .biography-grid-layout { flex-direction: column; text-align: center; }
             .biography-visual-anchor, .biography-content-narrative { flex: 0 0 100%; width: 100%; }
             .biography-image-canvas { max-width: 320px; margin: 0 auto; }
 
+            /* ✅ payroll box kolom mobile fix */
             .competency-dual-matrix-grid { grid-template-columns: 1fr; gap: 3.5rem; }
-            .payroll-operations-ecosystem-box { grid-column: span 1; }
+            .payroll-operations-ecosystem-box { margin-top: 2rem; }
 
             .chronological-timeline-backbone::before { left: 20px; }
             .timeline-individual-block { flex-direction: row !important; margin-bottom: 3.5rem; }
@@ -1555,447 +1592,527 @@ html, body {
             .projects-architectural-grid, .certifications-architectural-grid { grid-template-columns: 1fr; }
             .contact-communications-matrix-layout { grid-template-columns: 1fr; gap: 4rem; }
             .button-dispatch-direct-email { width: 100%; justify-content: center; }
+            .architectural-title-main { font-size: 34px; }
+            .contact-manifesto-left h2 { font-size: 36px; }
+
+            #back-to-top { bottom: 1.25rem; right: 1.25rem; }
         }
     </style>
 </head>
 <body>
 
-    <div class="kinetic-background-container">
+    <!-- ✅ Skip to content -->
+    <a href="#main-content" class="skip-to-content">Lewati ke konten utama</a>
+
+    <div class="kinetic-background-container" aria-hidden="true">
         <div class="ambient-mesh-glow-1"></div>
         <div class="ambient-mesh-glow-2"></div>
         <div class="ambient-mesh-glow-3"></div>
     </div>
-    <div class="digital-grain-overlay"></div>
-    
-    <div id="dynamic-scroll-tracker"></div>
-    <div id="luxury-cursor-core"></div>
-    <div id="luxury-cursor-aura"></div>
+    <div class="digital-grain-overlay" aria-hidden="true"></div>
 
-    <nav class="executive-navigation">
+    <div id="dynamic-scroll-tracker" role="progressbar" aria-label="Progress membaca halaman" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    <div id="luxury-cursor-core" aria-hidden="true"></div>
+    <div id="luxury-cursor-aura" aria-hidden="true"></div>
+
+    <!-- ✅ IMPROVEMENT 9: Back to Top -->
+    <a href="#main-content" id="back-to-top" aria-label="Kembali ke atas halaman">
+        <i class="fa-solid fa-chevron-up"></i>
+    </a>
+
+    <nav class="executive-navigation" role="navigation" aria-label="Navigasi utama">
         <div class="structural-container nav-architectural-wrapper">
-            <a href="#" class="brand-monogram-block">
-                <span class="brand-monogram">DB.</span>
-                <div class="brand-monogram-separator"></div>
+            <a href="#" class="brand-monogram-block" aria-label="Dimas Bayu Saputro — Halaman utama">
+                <span class="brand-monogram" aria-hidden="true">DB.</span>
+                <div class="brand-monogram-separator" aria-hidden="true"></div>
                 <span class="brand-tagline-meta">HR Specialist</span>
             </a>
-            
-            <ul class="nav-link-architecture-list" id="nav-link-architecture-list">
-                <li><a href="#biography" class="nav-interactive-anchor">Biografi</a></li>
-                <li><a href="#competency" class="nav-interactive-anchor">Matriks Keahlian</a></li>
-                <li><a href="#projects" class="nav-interactive-anchor">Portofolio Project</a></li>
-                <li><a href="#certifications" class="nav-interactive-anchor">Sertifikasi</a></li>
-                <li><a href="#chronology" class="nav-interactive-anchor">Pengalaman Kerja</a></li>
-                <li><a href="#contact" class="nav-interactive-anchor">Hubungi</a></li>
-                <li><a href="https://drive.google.com/drive/folders/1luyYEceg9RRiMxB6a6GZ6rzN_Z12hxqx?usp=sharing" target="_blank" class="button-download-cv-premium">Unduh CV Resmi</a></li>
+
+            <ul class="nav-link-architecture-list" id="nav-link-architecture-list" role="menubar">
+                <li role="none"><a href="#biography" class="nav-interactive-anchor" role="menuitem">Biografi</a></li>
+                <li role="none"><a href="#competency" class="nav-interactive-anchor" role="menuitem">Matriks Keahlian</a></li>
+                <li role="none"><a href="#projects" class="nav-interactive-anchor" role="menuitem">Portofolio Project</a></li>
+                <li role="none"><a href="#certifications" class="nav-interactive-anchor" role="menuitem">Sertifikasi</a></li>
+                <li role="none"><a href="#chronology" class="nav-interactive-anchor" role="menuitem">Pengalaman Kerja</a></li>
+                <li role="none"><a href="#contact" class="nav-interactive-anchor" role="menuitem">Hubungi</a></li>
+                <li role="none"><a href="https://drive.google.com/drive/folders/1luyYEceg9RRiMxB6a6GZ6rzN_Z12hxqx?usp=sharing" target="_blank" rel="noopener noreferrer" class="button-download-cv-premium" aria-label="Unduh CV Resmi — terbuka di tab baru">Unduh CV Resmi</a></li>
             </ul>
 
-            <button class="hamburger-menu-trigger" id="hamburger-menu-trigger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="hamburger-menu-trigger" id="hamburger-menu-trigger" aria-expanded="false" aria-controls="nav-link-architecture-list" aria-label="Buka menu navigasi">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </button>
         </div>
     </nav>
 
-    <section class="hero-masterwork structural-container">
-        <div style="width: 100%;">
-            <div class="hero-split-matrix">
-                <div class="hero-left-intelligence">
-                    <div class="hero-badge-announcement">Human Resources & Administration  ·  BNSP Certified Practitioner</div>
-                    <h1 class="hero-monumental-heading">Dimas Bayu<br><em>Saputro</em><span class="punctuation-dot">.</span></h1>
-                    <p class="hero-narrative-paragraph">Profesional Sumber Daya Manusia berlisensi BNSP resmi yang mendedikasikan keahlian dalam rekayasa administrasi kompensasi, audit regulasi hukum ketenagakerjaan, serta efisiensi tata kelola operasional SDM korporasi.</p>
-                    <div class="hero-call-to-actions">
-                        <a href="#projects" class="button-call-primary">Eksplorasi Project <i class="fa-solid fa-chevron-right"></i></a>
-                        <a href="#contact" class="button-call-secondary">Hubungi Saya</a>
-                    </div>
-                </div>
-                
-                <div class="hero-right-visual-sculpture">
-                    <div class="sculpture-photo-wrapper">
-                        <div class="sculpture-circle-mask">
-                            <img src="https://dimasbayusaputroofficial.github.io/myportofolio/fotoformaldimasbayusaputro.png" alt="Dimas Bayu Saputro, S.P." class="sculpture-main-image">
+    <main id="main-content">
+        <section class="hero-masterwork structural-container" aria-labelledby="hero-heading">
+            <div style="width: 100%;">
+                <div class="hero-split-matrix">
+                    <div class="hero-left-intelligence">
+                        <p class="hero-badge-announcement">Human Resources & Administration · BNSP Certified Practitioner</p>
+                        <h1 id="hero-heading" class="hero-monumental-heading">Dimas Bayu<br><em>Saputro</em><span class="punctuation-dot" aria-hidden="true">.</span></h1>
+                        <p class="hero-narrative-paragraph">Profesional Sumber Daya Manusia berlisensi BNSP resmi yang mendedikasikan keahlian dalam rekayasa administrasi kompensasi, audit regulasi hukum ketenagakerjaan, serta efisiensi tata kelola operasional SDM korporasi.</p>
+                        <div class="hero-call-to-actions">
+                            <a href="#projects" class="button-call-primary">Eksplorasi Project <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+                            <a href="#contact" class="button-call-secondary">Hubungi Saya</a>
                         </div>
-                        <div class="sculpture-astronomy-ring astronomy-ring-alpha"></div>
-                        <div class="sculpture-astronomy-ring astronomy-ring-beta"></div>
+                    </div>
+
+                    <div class="hero-right-visual-sculpture">
+                        <div class="sculpture-photo-wrapper">
+                            <div class="sculpture-circle-mask">
+                                <img src="https://dimasbayusaputroofficial.github.io/myportofolio/fotoformaldimasbayusaputro.png"
+                                     alt="Foto formal Dimas Bayu Saputro, S.P. — HR & Payroll Specialist bersertifikat BNSP"
+                                     class="sculpture-main-image"
+                                     loading="eager"
+                                     onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg,#0e0e17,#1a1a2e)'">
+                            </div>
+                            <div class="sculpture-astronomy-ring astronomy-ring-alpha" aria-hidden="true"></div>
+                            <div class="sculpture-astronomy-ring astronomy-ring-beta" aria-hidden="true"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="enterprise-statistics-panel reveal-trigger" role="list" aria-label="Statistik profesional">
+                    <div class="statistic-node-item" role="listitem">
+                        <span class="statistic-numerical-value">3.80</span>
+                        <span class="statistic-contextual-label">IPK Kelulusan S1</span>
+                    </div>
+                    <div class="statistic-node-item" role="listitem">
+                        <span class="statistic-numerical-value">BNSP</span>
+                        <span class="statistic-contextual-label">Lisensi Valid Kompetensi Staff</span>
+                    </div>
+                    <div class="statistic-node-item" role="listitem">
+                        <span class="statistic-numerical-value">3+ Core</span>
+                        <span class="statistic-contextual-label">Sertifikasi Spesialisasi HR</span>
+                    </div>
+                    <div class="statistic-node-item" role="listitem">
+                        <span class="statistic-numerical-value">UNAIR</span>
+                        <span class="statistic-contextual-label">S2 PSDM (On-Going) (2026-2027)</span>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="enterprise-statistics-panel reveal-trigger">
-                <div class="statistic-node-item">
-                    <span class="statistic-numerical-value">3.80</span>
-                    <span class="statistic-contextual-label">IPK Kelulusan S1</span>
-                </div>
-                <div class="statistic-node-item">
-                    <span class="statistic-numerical-value">BNSP</span>
-                    <span class="statistic-contextual-label">Lisensi Valid Kompetensi Staff</span>
-                </div>
-                <div class="statistic-node-item">
-                    <span class="statistic-numerical-value">3+ Core</span>
-                    <span class="statistic-contextual-label">Sertifikasi Spesialisasi HR</span>
-                </div>
-                <div class="statistic-node-item">
-                    <span class="statistic-numerical-value">UNAIR</span>
-                    <span class="statistic-contextual-label">S2 PSDM (On-Going) (2026-2027)</span>
-                </div>
+        <section id="biography" class="structural-container master-section-spacing reveal-trigger" aria-labelledby="biography-heading">
+            <div class="architectural-header">
+                <div class="architectural-subtitle-meta" aria-hidden="true">Profil Profesional</div>
+                <h2 id="biography-heading" class="architectural-title-main">Biografi Singkat</h2>
             </div>
-        </div>
-    </section>
 
-    <section id="biography" class="structural-container master-section-spacing reveal-trigger">
-        <div class="architectural-header">
-            <div class="architectural-subtitle-meta">Profil Profesional</div>
-            <h2 class="architectural-title-main">Biografi Singkat</h2>
-        </div>
-        
-        <div class="biography-grid-layout">
-            <div class="biography-visual-anchor">
-                <div class="biography-image-canvas">
-                    <img src="https://dimasbayusaputroofficial.github.io/myportofolio/foto1.jpg" alt="Dimas Bayu Saputro Executive Profile" class="biography-native-image">
+            <div class="biography-grid-layout">
+                <div class="biography-visual-anchor">
+                    <div class="biography-image-canvas">
+                        <img src="https://dimasbayusaputroofficial.github.io/myportofolio/foto1.jpg"
+                             alt="Dimas Bayu Saputro dalam sesi profesional — menunjukkan sikap dan penampilan siap kerja di bidang HR"
+                             class="biography-native-image"
+                             loading="lazy"
+                             onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg,#0e0e17,#1a1a2e)'">
+                    </div>
                 </div>
-            </div>
-            <div class="biography-content-narrative">
-                <h3 class="biography-statement-highlight">Memulai Karir HR dengan Fondasi yang Tepat.</h3>
-                <p class="biography-detailed-exposition">Saya adalah fresh graduate yang memilih mempersiapkan diri secara serius sebelum terjun ke dunia kerja HR — dengan menyelesaikan sertifikasi kompetensi BNSP Staff SDM dan Intensive Bootcamp HR Payroll Specialist.<br><br>Bagi saya, pengelolaan penggajian yang akurat dan transparan bukan hanya soal angka, tapi soal kepercayaan antara perusahaan dan karyawan. Saat ini saya juga sedang menempuh S2 PSDM di Universitas Airlangga untuk memperdalam fondasi akademik di bidang SDM.</p>
-                
-                <div class="biography-capsule-grid">
-                    <div class="glassmorphism-luxury-card biography-miniature-capsule">
-                        <span class="capsule-icon-element">🎓</span>
-                        <h4>S1 Agribisnis</h4>
-                        <p>Univ. Trunojoyo Madura · IPK Lulus 3.80 (2024)</p>
-                    </div>
-                    <div class="glassmorphism-luxury-card biography-miniature-capsule">
-                        <span class="capsule-icon-element">🏛️</span>
-                        <h4>Magister PSDM</h4>
-                        <p>Universitas Airlangga · On-Going (2026-2027)</p>
-                    </div>
-                    <div class="glassmorphism-luxury-card biography-miniature-capsule">
-                        <span class="capsule-icon-element">📜</span>
-                        <h4>Sertifikasi BNSP</h4>
-                        <p>Staff SDM · Berlaku S.D Agustus 2028</p>
+                <div class="biography-content-narrative">
+                    <h3 class="biography-statement-highlight">Memulai Karir HR dengan Fondasi yang Tepat.</h3>
+                    <p class="biography-detailed-exposition">Saya adalah fresh graduate yang memilih mempersiapkan diri secara serius sebelum terjun ke dunia kerja HR — dengan menyelesaikan sertifikasi kompetensi BNSP Staff SDM dan Intensive Bootcamp HR Payroll Specialist.<br><br>Bagi saya, pengelolaan penggajian yang akurat dan transparan bukan hanya soal angka, tapi soal kepercayaan antara perusahaan dan karyawan. Saat ini saya juga sedang menempuh S2 PSDM di Universitas Airlangga untuk memperdalam fondasi akademik di bidang SDM.</p>
+
+                    <div class="biography-capsule-grid">
+                        <div class="glassmorphism-luxury-card biography-miniature-capsule">
+                            <span class="capsule-icon-element" aria-hidden="true">🎓</span>
+                            <h4>S1 Agribisnis</h4>
+                            <p>Univ. Trunojoyo Madura · IPK Lulus 3.80 (2024)</p>
+                        </div>
+                        <div class="glassmorphism-luxury-card biography-miniature-capsule">
+                            <span class="capsule-icon-element" aria-hidden="true">🏛️</span>
+                            <h4>Magister PSDM</h4>
+                            <p>Universitas Airlangga · On-Going (2026-2027)</p>
+                        </div>
+                        <div class="glassmorphism-luxury-card biography-miniature-capsule">
+                            <span class="capsule-icon-element" aria-hidden="true">📜</span>
+                            <h4>Sertifikasi BNSP</h4>
+                            <p>Staff SDM · Berlaku S.D Agustus 2028</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="competency" class="structural-container master-section-spacing reveal-trigger">
-        <div class="architectural-header">
-            <div class="architectural-subtitle-meta">Kombinasi Kompetensi</div>
-            <h2 class="architectural-title-main">Matriks Keahlian Terapan</h2>
-        </div>
+        <section id="competency" class="structural-container master-section-spacing reveal-trigger" aria-labelledby="competency-heading">
+            <div class="architectural-header">
+                <div class="architectural-subtitle-meta" aria-hidden="true">Kombinasi Kompetensi</div>
+                <h2 id="competency-heading" class="architectural-title-main">Matriks Keahlian Terapan</h2>
+            </div>
 
-        <div class="competency-dual-matrix-grid">
-            <div>
-                <h3 class="competency-column-header"><i class="fa-solid fa-shield-halved"></i> Kompetensi Inti & Hard Skill HR</h3>
-                <div class="competency-bars-stack">
-                    <div class="competency-individual-node">
-                        <div class="competency-meta-details"><span class="competency-string-name">Administrasi Payroll Korporat</span><span class="competency-numeric-percentage">90%</span></div>
-                        <div class="competency-bar-track-bg"><div class="competency-bar-fill-interactive" data-width="90%"></div></div>
+            <div class="competency-dual-matrix-grid">
+                <div>
+                    <h3 class="competency-column-header"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Kompetensi Inti & Hard Skill HR</h3>
+                    <!-- ✅ Skill bars dengan level badge menggantikan persentase -->
+                    <div class="competency-bars-stack">
+                        <div class="competency-individual-node">
+                            <div class="competency-meta-details">
+                                <span class="competency-string-name">Administrasi Payroll</span>
+                                <span class="competency-level-badge level-expert">Expert</span>
+                            </div>
+                            <div class="competency-bar-track-bg"><div class="competency-bar-fill-interactive" data-width="90%"></div></div>
+                        </div>
+                        <div class="competency-individual-node">
+                            <div class="competency-meta-details">
+                                <span class="competency-string-name">PPh 21 Skema TER & Pasal 17</span>
+                                <span class="competency-level-badge level-expert">Expert</span>
+                            </div>
+                            <div class="competency-bar-track-bg"><div class="competency-bar-fill-interactive" data-width="88%"></div></div>
+                        </div>
+                        <div class="competency-individual-node">
+                            <div class="competency-meta-details">
+                                <span class="competency-string-name">Hukum Ketenagakerjaan & Compliance</span>
+                                <span class="competency-level-badge level-proficient">Proficient</span>
+                            </div>
+                            <div class="competency-bar-track-bg"><div class="competency-bar-fill-interactive" data-width="82%"></div></div>
+                        </div>
+                        <div class="competency-individual-node">
+                            <div class="competency-meta-details">
+                                <span class="competency-string-name">Otomasi Advanced Microsoft Excel</span>
+                                <span class="competency-level-badge level-expert">Expert</span>
+                            </div>
+                            <div class="competency-bar-track-bg"><div class="competency-bar-fill-interactive" data-width="88%"></div></div>
+                        </div>
+                        <div class="competency-individual-node">
+                            <div class="competency-meta-details">
+                                <span class="competency-string-name">Penyusunan SOP & Kebijakan HR</span>
+                                <span class="competency-level-badge level-proficient">Proficient</span>
+                            </div>
+                            <div class="competency-bar-track-bg"><div class="competency-bar-fill-interactive" data-width="80%"></div></div>
+                        </div>
+                        <div class="competency-individual-node">
+                            <div class="competency-meta-details">
+                                <span class="competency-string-name">Struktur & Skala Upah (SSU) Matrix</span>
+                                <span class="competency-level-badge level-proficient">Proficient</span>
+                            </div>
+                            <div class="competency-bar-track-bg"><div class="competency-bar-fill-interactive" data-width="82%"></div></div>
+                        </div>
+                        <div class="competency-individual-node">
+                            <div class="competency-meta-details">
+                                <span class="competency-string-name">Kalkulasi PHK, Pesangon, THR & Lembur</span>
+                                <span class="competency-level-badge level-expert">Expert</span>
+                            </div>
+                            <div class="competency-bar-track-bg"><div class="competency-bar-fill-interactive" data-width="87%"></div></div>
+                        </div>
                     </div>
-                    <div class="competency-individual-node">
-                        <div class="competency-meta-details"><span class="competency-string-name">PPh 21 Skema TER & Pasal 17</span><span class="competency-numeric-percentage">88%</span></div>
-                        <div class="competency-bar-track-bg"><div class="competency-bar-fill-interactive" data-width="88%"></div></div>
+                </div>
+
+                <div>
+                    <h3 class="competency-column-header"><i class="fa-solid fa-brain" aria-hidden="true"></i> Metodologi Berpikir & Soft Skill</h3>
+                    <div class="soft-methodology-pills-cloud" style="margin-bottom: 2.5rem;" role="list" aria-label="Soft skill">
+                        <span class="methodology-pill-node" role="listitem">Analytical Thinking</span>
+                        <span class="methodology-pill-node" role="listitem">Problem-Solving</span>
+                        <span class="methodology-pill-node" role="listitem">Detail-Oriented Precision</span>
+                        <span class="methodology-pill-node" role="listitem">Corporate Communication</span>
+                        <span class="methodology-pill-node" role="listitem">Interpersonal Relations</span>
+                        <span class="methodology-pill-node" role="listitem">Strategic Leadership</span>
+                        <span class="methodology-pill-node" role="listitem">Rigid Time Management</span>
+                        <span class="methodology-pill-node" role="listitem">Adaptive & Agile Learner</span>
                     </div>
-                    <div class="competency-individual-node">
-                        <div class="competency-meta-details"><span class="competency-string-name">Hukum Ketenagakerjaan & Compliance</span><span class="competency-numeric-percentage">82%</span></div>
-                        <div class="competency-bar-track-bg"><div class="competency-bar-fill-interactive" data-width="82%"></div></div>
-                    </div>
-                    <div class="competency-individual-node">
-                        <div class="competency-meta-details"><span class="competency-string-name">Otomasi Advanced Microsoft Excel</span><span class="competency-numeric-percentage">88%</span></div>
-                        <div class="competency-bar-track-bg"><div class="competency-bar-fill-interactive" data-width="88%"></div></div>
-                    </div>
-                    <div class="competency-individual-node">
-                        <div class="competency-meta-details"><span class="competency-string-name">Penyusunan SOP & Kebijakan HR</span><span class="competency-numeric-percentage">80%</span></div>
-                        <div class="competency-bar-track-bg"><div class="competency-bar-fill-interactive" data-width="80%"></div></div>
-                    </div>
-                    <div class="competency-individual-node">
-                        <div class="competency-meta-details"><span class="competency-string-name">Struktur & Skala Upah (SSU) Matrix</span><span class="competency-numeric-percentage">82%</span></div>
-                        <div class="competency-bar-track-bg"><div class="competency-bar-fill-interactive" data-width="82%"></div></div>
-                    </div>
-                    <div class="competency-individual-node">
-                        <div class="competency-meta-details"><span class="competency-string-name">Kalkulasi PHK, Pesangon, THR & Lembur</span><span class="competency-numeric-percentage">87%</span></div>
-                        <div class="competency-bar-track-bg"><div class="competency-bar-fill-interactive" data-width="87%"></div></div>
+
+                    <div class="payroll-operations-ecosystem-box">
+                        <h4 class="payroll-ecosystem-title"><i class="fa-solid fa-coins" aria-hidden="true"></i> Ruang Lingkup Operasional Kompensasi</h4>
+                        <div class="payroll-tags-cloud" role="list" aria-label="Topik kompensasi yang dikuasai">
+                            <span class="payroll-tag-element" role="listitem">PPh 21 Reguler TER</span>
+                            <span class="payroll-tag-element" role="listitem">PPh 21 Tahunan Pasal 17</span>
+                            <span class="payroll-tag-element" role="listitem">Arsitektur Slip Gaji Digital</span>
+                            <span class="payroll-tag-element" role="listitem">BPJS Ketenagakerjaan</span>
+                            <span class="payroll-tag-element" role="listitem">BPJS Kesehatan</span>
+                            <span class="payroll-tag-element" role="listitem">Kalkulasi THR Prorata</span>
+                            <span class="payroll-tag-element" role="listitem">Kompensasi Lembur Karyawan</span>
+                            <span class="payroll-tag-element" role="listitem">Skema Bonus & Insentif Performa</span>
+                            <span class="payroll-tag-element" role="listitem">Pesangon / Kompensasi PHK UU Cipta Kerja</span>
+                            <span class="payroll-tag-element" role="listitem">Master Database Payroll Excel</span>
+                            <span class="payroll-tag-element" role="listitem">Laporan Konsolidasi Audit Penggajian</span>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div>
-                <h3 class="competency-column-header"><i class="fa-solid fa-brain"></i> Metodologi Berpikir & Soft Skill</h3>
-                <div class="soft-methodology-pills-cloud" style="margin-bottom: 2.5rem;">
-                    <span class="methodology-pill-node">Analytical Thinking</span>
-                    <span class="methodology-pill-node">Problem-Solving</span>
-                    <span class="methodology-pill-node">Detail-Oriented Precision</span>
-                    <span class="methodology-pill-node">Corporate Communication</span>
-                    <span class="methodology-pill-node">Interpersonal Relations</span>
-                    <span class="methodology-pill-node">Strategic Leadership</span>
-                    <span class="methodology-pill-node">Rigid Time Management</span>
-                    <span class="methodology-pill-node">Adaptive & Agile Learner</span>
-                </div>
-
-                <div class="glassmorphism-luxury-card payroll-operations-ecosystem-box">
-                    <h4 class="payroll-ecosystem-title"><i class="fa-solid fa-coins"></i> Ruang Lingkup Operasional Kompensasi</h4>
-                    <div class="payroll-tags-cloud">
-                        <span class="payroll-tag-element">PPh 21 Reguler TER</span>
-                        <span class="payroll-tag-element">PPh 21 Tahunan Pasal 17</span>
-                        <span class="payroll-tag-element">Arsitektur Slip Gaji Digital</span>
-                        <span class="payroll-tag-element">BPJS Ketenagakerjaan</span>
-                        <span class="payroll-tag-element">BPJS Kesehatan</span>
-                        <span class="payroll-tag-element">Kalkulasi THR Prorata</span>
-                        <span class="payroll-tag-element">Kompensasi Lembur Karyawan</span>
-                        <span class="payroll-tag-element">Skema Bonus & Insentif Performa</span>
-                        <span class="payroll-tag-element">Pesangon / Kompensasi PHK UU Cipta Kerja</span>
-                        <span class="payroll-tag-element">Master Database Payroll Excel</span>
-                        <span class="payroll-tag-element">Laporan Konsolidasi Audit Penggajian</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="structural-container master-section-spacing reveal-trigger">
-        <div class="architectural-header">
-            <div class="architectural-subtitle-meta">Aset Kerja Terapan</div>
-            <h2 class="architectural-title-main">Dokumentasi Proyek Praktis</h2>
-        </div>
-
-        <div class="projects-architectural-grid">
-            <div class="glassmorphism-luxury-card project-glass-card-node">
-                <div class="project-icon-container"><i class="fa-solid fa-diagram-project"></i></div>
-                <h3>Sertifikasi & Pelatihan Human Capital Staff</h3>
-                <ul class="project-bullet-functional-lists">
-                    <li>Penyusunan dokumen Analisis Jabatan (Anjab) dan deskripsi posisi guna memperjelas penugasan fungsional organisasi.</li>
-                    <li>Pembuatan simulasi perhitungan iuran BPJS Kesehatan & Ketenagakerjaan sesuai tarif potongan regulasi terbaru.</li>
-                    <li>Pengembangan database terpadu data kompensasi serta pengelolaan data kompensasi internal secara aman.</li>
-                    <li>Penyusunan draf legalitas Perjanjian Kerja Waktu Tertentu (PKWT) yang selaras dengan payung hukum ketenagakerjaan nasional.</li>
-                    <li>Perancangan Standar Operasional Prosedur (SOP) internal serta matriks Training Needs Analysis (TNA) instansional.</li>
-                </ul>
-                <div class="project-meta-tags-row">
-                    <span class="project-individual-tag">Analisis Jabatan</span>
-                    <span class="project-individual-tag">Regulasi PKWT</span>
-                    <span class="project-individual-tag">Matriks TNA</span>
-                    <span class="project-individual-tag">SOP SDM</span>
-                </div>
-                <a href="https://drive.google.com/drive/folders/13uweCguimDLb2Ryi8BL4jZ761BWL6k4e?usp=drive_link" target="_blank" class="button-project-anchor-gate">Buka Dokumen Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        <section id="projects" class="structural-container master-section-spacing reveal-trigger" aria-labelledby="projects-heading">
+            <div class="architectural-header">
+                <div class="architectural-subtitle-meta" aria-hidden="true">Aset Kerja Terapan</div>
+                <h2 id="projects-heading" class="architectural-title-main">Dokumentasi Proyek Praktis</h2>
             </div>
 
-            <div class="glassmorphism-luxury-card project-glass-card-node">
-                <div class="project-icon-container"><i class="fa-solid fa-calculator"></i></div>
-                <h3>Intensive Bootcamp: HR Payroll Specialist</h3>
-                <ul class="project-bullet-functional-lists">
-                    <li>Perancangan SOP alur siklus penggajian bulanan dari rekap absensi hingga tanggal cut-off distribusi payroll.</li>
-                    <li>Simulasi kalkulasi teknis upah prorata, upah lembur darurat, bonus tahunan, serta perhitungan pesangon pemutusan hubungan kerja.</li>
-                    <li>Implementasi praktis perhitungan pajak penghasilan PPh 21 dengan sistem TER (Tarif Efektif Rata-rata) terbaru.</li>
-                    <li>Formulasi Struktur dan Skala Upah (SSU) menggunakan metode poin faktor penentu jabatan korporasi.</li>
-                    <li>Pembuatan arsitektur lembar kerja Master Payroll otomatis di Excel berkemampuan audit internal instan.</li>
-                    <li>Penyelesaian studi kasus kompleks payroll end-to-end untuk berbagai skenario status perkawinan karyawan secara presisi.</li>
-                </ul>
-                <div class="project-meta-tags-row">
-                    <span class="project-individual-tag">PPh 21 TER</span>
-                    <span class="project-individual-tag">Arsitektur SSU</span>
-                    <span class="project-individual-tag">Otomasi Penggajian</span>
-                </div>
-                <a href="https://drive.google.com/drive/folders/1q9R86xJGcmiK72TS4hW6K3QTp1NWgfRs?usp=drive_link" target="_blank" class="button-project-anchor-gate">Buka Dokumen Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-
-            <div class="glassmorphism-luxury-card project-glass-card-node">
-                <div class="project-icon-container"><i class="fa-solid fa-file-invoice"></i></div>
-                <h3>Administrasi HR & Analisis Data Terapan</h3>
-                <ul class="project-bullet-functional-lists">
-                    <li>Penyelesaian kasus pengolahan data karyawan bervolume tinggi menggunakan formula nested VLOOKUP, HLOOKUP, dan kombinasi INDEX-MATCH.</li>
-                    <li>Utilisasi fitur Pivot Table serta Power Query untuk menyaring, mengelompokkan, dan mengekstrak laporan mutasi karyawan.</li>
-                    <li>Perancangan dasbor HR (HR Dashboard) interaktif guna visualisasi tingkat retensi, absensi, dan rasio biaya overhead SDM.</li>
-                    <li>Konseptualisasi template lembar kerja pemantauan rekapitulasi kehadiran harian terintegrasi otomatis.</li>
-                </ul>
-                <div class="project-meta-tags-row">
-                    <span class="project-individual-tag">Advanced Excel</span>
-                    <span class="project-individual-tag">Pivot Table System</span>
-                    <span class="project-individual-tag">Dasbor Visual</span>
-                </div>
-                <a href="https://drive.google.com/drive/folders/1ugJ6AxoVNRlKsMFSPEtKJv9lGN8ViNx5?usp=drive_link" target="_blank" class="button-project-anchor-gate">Buka Dokumen Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <section id="certifications" class="structural-container master-section-spacing reveal-trigger">
-        <div class="architectural-header">
-            <div class="architectural-subtitle-meta">Kredensial Resmi</div>
-            <h2 class="architectural-title-main">Sertifikasi Kompetensi Industri</h2>
-        </div>
-
-        <div class="certifications-architectural-grid">
-            <div class="glassmorphism-luxury-card certification-glass-card-node">
-                <div class="certification-image-frame-container">
-                    <img src="https://dimasbayusaputroofficial.github.io/myportofolio/bnsphrstaff.jpg" alt="Sertifikat BNSP Dimas Bayu Saputro" class="certification-thumbnail-image">
-                </div>
-                <div class="certification-card-divider"></div>
-                <h3>Sertifikasi Kompetensi Human Capital Staff</h3>
-                <p class="certification-issuing-authority">BNSP — LSP MSDM Universal</p>
-                <p class="certification-serial-meta-data">No. Registrasi: 70209.4416.0.0028148.2025<br>Masa Validitas: Agustus 2025 – Agustus 2028</p>
-                <div class="certification-action-triggers">
-                    <button class="trigger-lightbox-button"><i class="fa-regular fa-image"></i> Pratinjau</button>
-                    <a href="https://drive.google.com/file/d/1egEUlJ5tvYsXtlBFlxHcl-PMWYd6TcC_/view?usp=sharing" target="_blank" class="anchor-external-drive-sertifikat">Buka Drive <i class="fa-solid fa-link"></i></a>
-                </div>
-            </div>
-
-            <div class="glassmorphism-luxury-card certification-glass-card-node">
-                <div class="certification-image-frame-container">
-                    <img src="https://dimasbayusaputroofficial.github.io/myportofolio/pelatihanhrstaff.jpg" alt="Sertifikat Pelatihan HC Staff Dimas" class="certification-thumbnail-image">
-                </div>
-                <div class="certification-card-divider"></div>
-                <h3>Pelatihan Profesi Human Capital Staff</h3>
-                <p class="certification-issuing-authority">LKP-LPP Platinum Skills Indonesia</p>
-                <p class="certification-serial-meta-data">No. Sertifikat: PS-PBK/MSDM/2025/V/400428<br>Tanggal Penerbitan: 23 Mei 2025</p>
-                <div class="certification-action-triggers">
-                    <button class="trigger-lightbox-button"><i class="fa-regular fa-image"></i> Pratinjau</button>
-                    <a href="https://drive.google.com/file/d/1kWxI5W-YmWbvwZjC9KWSz6Amre7x4nF5/view?usp=sharing" target="_blank" class="anchor-external-drive-sertifikat">Buka Drive <i class="fa-solid fa-link"></i></a>
-                </div>
-            </div>
-
-            <div class="glassmorphism-luxury-card certification-glass-card-node">
-                <div class="certification-image-frame-container">
-                    <img src="https://dimasbayusaputroofficial.github.io/myportofolio/bootcamppayroll.jpg" alt="Sertifikat Bootcamp Payroll Specialist Dimas" class="certification-thumbnail-image">
-                </div>
-                <div class="certification-card-divider"></div>
-                <h3>Intensive Bootcamp: HR Payroll Specialist</h3>
-                <p class="certification-issuing-authority">Ioda Academy — Competency & Completion</p>
-                <p class="certification-serial-meta-data">No. Kelulusan: 160/HR-BOOTCAMP/Competency/VII/2025<br>Periode Pelaksanaan: Juni – Juli 2025</p>
-                <div class="certification-action-triggers">
-                    <button class="trigger-lightbox-button"><i class="fa-regular fa-image"></i> Pratinjau</button>
-                    <a href="https://drive.google.com/file/d/1HKq6an8ZY-mm9Oe79e7tKJANEhviCFhK/view?usp=sharing" target="_blank" class="anchor-external-drive-sertifikat">Buka Drive <i class="fa-solid fa-link"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="chronology" class="structural-container master-section-spacing reveal-trigger">
-        <div class="architectural-header">
-            <div class="architectural-subtitle-meta">Rekam Jejak Karir</div>
-            <h2 class="architectural-title-main">Pengalaman & Kegiatan</h2>
-        </div>
-        <p class="timeline-editorial-disclaimer">"Membangun landasan profesional unggul melalui riset analitis, tata kelola taktis, dan validasi kompetensi berkelanjutan"</p>
-
-        <div class="chronological-timeline-backbone">
-            <div class="timeline-individual-block reveal-trigger">
-                <div class="timeline-core-node"></div>
-                <div class="glassmorphism-luxury-card timeline-glassmorphism-card">
-                    <span class="timeline-date-range-badge">Sep 2023 – Jan 2024</span>
-                    <span class="timeline-functional-type-badge">Riset Lapangan</span>
-                    <h3>Research Assistant / Enumerator</h3>
-                    <p class="timeline-corporate-entity">Universitas Trunojoyo Madura <span class="entity-separator">|</span> Jawa Timur</p>
-                    <ul class="timeline-achievement-bullet-stacks">
-                        <li>Mengurus penuh seluruh dokumen perizinan birokrasi riset tingkat tinggi lintas dinas di Bakesbangpol dengan rasio persetujuan 100%.</li>
-                        <li>Melakukan penghimpunan serta verifikasi kesahihan data primer dan data sekunder dari jajaran instansi pemerintahan daerah terkait.</li>
-                        <li>Melaksanakan wawancara mendalam (In-depth Interview) serta Focus Group Discussion terstruktur bersama para pemangku kebijakan.</li>
-                        <li>Memproses pengolahan data analitis spasial dan matriks kuantitatif memanfaatkan software Expert Choice 11 secara presisi.</li>
+            <div class="projects-architectural-grid">
+                <article class="glassmorphism-luxury-card project-glass-card-node">
+                    <div class="project-icon-container" aria-hidden="true"><i class="fa-solid fa-diagram-project"></i></div>
+                    <h3>Sertifikasi & Pelatihan Human Capital Staff</h3>
+                    <ul class="project-bullet-functional-lists">
+                        <li>Penyusunan dokumen Analisis Jabatan (Anjab) dan deskripsi posisi guna memperjelas penugasan fungsional organisasi.</li>
+                        <li>Pembuatan simulasi perhitungan iuran BPJS Kesehatan & Ketenagakerjaan sesuai tarif potongan regulasi terbaru.</li>
+                        <li>Pengembangan database terpadu data kompensasi serta pengelolaan data kompensasi internal secara aman.</li>
+                        <li>Penyusunan draf legalitas Perjanjian Kerja Waktu Tertentu (PKWT) yang selaras dengan payung hukum ketenagakerjaan nasional.</li>
+                        <li>Perancangan Standar Operasional Prosedur (SOP) internal serta matriks Training Needs Analysis (TNA) instansional.</li>
                     </ul>
-                </div>
-            </div>
+                    <div class="project-meta-tags-row">
+                        <span class="project-individual-tag">Analisis Jabatan</span>
+                        <span class="project-individual-tag">Regulasi PKWT</span>
+                        <span class="project-individual-tag">Matriks TNA</span>
+                        <span class="project-individual-tag">SOP SDM</span>
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/13uweCguimDLb2Ryi8BL4jZ761BWL6k4e?usp=drive_link" target="_blank" rel="noopener noreferrer" class="button-project-anchor-gate" aria-label="Buka Dokumen Project Sertifikasi Human Capital Staff di Google Drive">
+                        Buka Dokumen Project <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </a>
+                </article>
 
-            <div class="timeline-individual-block reveal-trigger">
-                <div class="timeline-core-node"></div>
-                <div class="glassmorphism-luxury-card timeline-glassmorphism-card">
-                    <span class="timeline-date-range-badge">Sep 2022 – Des 2022</span>
-                    <span class="timeline-functional-type-badge">Magang Industri</span>
-                    <h3>BUMDES Internship Officer</h3>
-                    <p class="timeline-corporate-entity">PT. Syncore Indonesia <span class="entity-separator">|</span> Pamekasan Hub</p>
-                    <ul class="timeline-achievement-bullet-stacks">
-                        <li>Mengasistensi perapian berkas legalitas pendaftaran Badan Hukum entitas usaha demi pemenuhan kepatuhan hukum operasional.</li>
-                        <li>Memformulasikan struktur Standar Operasional Prosedur (SOP) divisi internal guna mendongkrak efisiensi mata rantai operasional kerja.</li>
-                        <li>Membangun modul sistem pelaporan administrasi logistik dan pembukuan keuangan otomatis berbasis Excel spreadsheet.</li>
-                        <li>Menyusun rancangan analisis potensi ekspansi bisnis makro desa guna memetakan diversifikasi unit usaha strategis baru.</li>
+                <article class="glassmorphism-luxury-card project-glass-card-node">
+                    <div class="project-icon-container" aria-hidden="true"><i class="fa-solid fa-calculator"></i></div>
+                    <h3>Intensive Bootcamp: HR Payroll Specialist</h3>
+                    <ul class="project-bullet-functional-lists">
+                        <li>Perancangan SOP alur siklus penggajian bulanan dari rekap absensi hingga tanggal cut-off distribusi payroll.</li>
+                        <li>Simulasi kalkulasi teknis upah prorata, upah lembur darurat, bonus tahunan, serta perhitungan pesangon pemutusan hubungan kerja.</li>
+                        <li>Implementasi praktis perhitungan pajak penghasilan PPh 21 dengan sistem TER (Tarif Efektif Rata-rata) terbaru.</li>
+                        <li>Formulasi Struktur dan Skala Upah (SSU) menggunakan metode poin faktor penentu jabatan korporasi.</li>
+                        <li>Pembuatan arsitektur lembar kerja Master Payroll otomatis di Excel berkemampuan audit internal instan.</li>
+                        <li>Penyelesaian studi kasus kompleks payroll end-to-end untuk berbagai skenario status perkawinan karyawan secara presisi.</li>
                     </ul>
-                </div>
-            </div>
+                    <div class="project-meta-tags-row">
+                        <span class="project-individual-tag">PPh 21 TER</span>
+                        <span class="project-individual-tag">Arsitektur SSU</span>
+                        <span class="project-individual-tag">Otomasi Penggajian</span>
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/1q9R86xJGcmiK72TS4hW6K3QTp1NWgfRs?usp=drive_link" target="_blank" rel="noopener noreferrer" class="button-project-anchor-gate" aria-label="Buka Dokumen Project HR Payroll Specialist Bootcamp di Google Drive">
+                        Buka Dokumen Project <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </a>
+                </article>
 
-            <div class="timeline-individual-block reveal-trigger">
-                <div class="timeline-core-node"></div>
-                <div class="glassmorphism-luxury-card timeline-glassmorphism-card">
-                    <span class="timeline-date-range-badge">Periode Angkatan 2022</span>
-                    <span class="timeline-functional-type-badge">Manajemen Acara</span>
-                    <h3>Fungsional Divisi Acara & Strategis</h3>
-                    <p class="timeline-corporate-entity">GEMPITA UTM <span class="entity-separator">|</span> Bangkalan</p>
-                    <ul class="timeline-achievement-bullet-stacks">
-                        <li>Menyusun alur linimasa rundown pelaksanaan orientasi akbar mahasiswa baru tingkat universitas dengan jangkauan 150+ partisipan aktif.</li>
-                        <li>Mengatur orkestrasi pembagian beban tugas kepanitiaan lintas sektoral agar meminimalisir miskomunikasi di lapangan.</li>
-                        <li>Membangun jalur koordinasi intensif bersama jajaran birokrat universitas, pemateri seminar eksternal, dan pengisi acara.</li>
+                <article class="glassmorphism-luxury-card project-glass-card-node">
+                    <div class="project-icon-container" aria-hidden="true"><i class="fa-solid fa-file-invoice"></i></div>
+                    <h3>Administrasi Support</h3>
+                    <ul class="project-bullet-functional-lists">
+                        <li>Mengembangkan template pengolahan data karyawan menggunakan Excel dengan formula VLOOKUP, HLOOKUP, INDEX-MATCH, dan IF.</li>
+                        <li>Mengolah dan menganalisis data SDM menggunakan Pivot Table untuk menghasilkan laporan yang lebih terstruktur.</li>
+                        <li>Membuat dashboard HR berbasis Excel sebagai media monitoring absensi dan data karyawan.</li>
+                        <li>Menyusun sistem rekap absensi otomatis untuk mempermudah pencatatan dan pelaporan kehadiran karyawan.</li>
                     </ul>
+                    <div class="project-meta-tags-row">
+                        <span class="project-individual-tag">Advanced Excel</span>
+                        <span class="project-individual-tag">Pivot Table System</span>
+                        <span class="project-individual-tag">Dasbor Visual</span>
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/1ugJ6AxoVNRlKsMFSPEtKJv9lGN8ViNx5?usp=drive_link" target="_blank" rel="noopener noreferrer" class="button-project-anchor-gate" aria-label="Buka Dokumen Project Administrasi HR dan Analisis Data di Google Drive">
+                        Buka Dokumen Project <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section id="certifications" class="structural-container master-section-spacing reveal-trigger" aria-labelledby="certifications-heading">
+            <div class="architectural-header">
+                <div class="architectural-subtitle-meta" aria-hidden="true">Kredensial Resmi</div>
+                <h2 id="certifications-heading" class="architectural-title-main">Sertifikasi Kompetensi Industri</h2>
+            </div>
+
+            <div class="certifications-architectural-grid">
+                <article class="glassmorphism-luxury-card certification-glass-card-node">
+                    <div class="certification-image-frame-container">
+                        <img src="https://dimasbayusaputroofficial.github.io/myportofolio/bnsphrstaff.jpg"
+                             alt="Sertifikat Kompetensi BNSP atas nama Dimas Bayu Saputro — Human Capital Staff, No. 70209.4416.0.0028148.2025, berlaku hingga Agustus 2028"
+                             class="certification-thumbnail-image"
+                             loading="lazy">
+                    </div>
+                    <div class="certification-card-divider"></div>
+                    <h3>Sertifikasi Kompetensi Human Capital Staff</h3>
+                    <p class="certification-issuing-authority">BNSP — LSP MSDM Universal</p>
+                    <p class="certification-serial-meta-data">No. Registrasi: 70209.4416.0.0028148.2025<br>Masa Validitas: Agustus 2025 – Agustus 2028</p>
+                    <div class="certification-action-triggers">
+                        <button class="trigger-lightbox-button" aria-label="Pratinjau sertifikat BNSP Human Capital Staff">
+                            <i class="fa-regular fa-image" aria-hidden="true"></i> Pratinjau
+                        </button>
+                        <a href="https://drive.google.com/file/d/1egEUlJ5tvYsXtlBFlxHcl-PMWYd6TcC_/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="anchor-external-drive-sertifikat" aria-label="Buka sertifikat BNSP di Google Drive">
+                            Buka Drive <i class="fa-solid fa-link" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="glassmorphism-luxury-card certification-glass-card-node">
+                    <div class="certification-image-frame-container">
+                        <img src="https://dimasbayusaputroofficial.github.io/myportofolio/pelatihanhrstaff.jpg"
+                             alt="Sertifikat Pelatihan Profesi Human Capital Staff dari LKP-LPP Platinum Skills Indonesia atas nama Dimas Bayu Saputro, diterbitkan 23 Mei 2025"
+                             class="certification-thumbnail-image"
+                             loading="lazy">
+                    </div>
+                    <div class="certification-card-divider"></div>
+                    <h3>Pelatihan Profesi Human Capital Staff</h3>
+                    <p class="certification-issuing-authority">LKP-LPP Platinum Skills Indonesia</p>
+                    <p class="certification-serial-meta-data">No. Sertifikat: PS-PBK/MSDM/2025/V/400428<br>Tanggal Penerbitan: 23 Mei 2025</p>
+                    <div class="certification-action-triggers">
+                        <button class="trigger-lightbox-button" aria-label="Pratinjau sertifikat pelatihan HR Staff">
+                            <i class="fa-regular fa-image" aria-hidden="true"></i> Pratinjau
+                        </button>
+                        <a href="https://drive.google.com/file/d/1kWxI5W-YmWbvwZjC9KWSz6Amre7x4nF5/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="anchor-external-drive-sertifikat" aria-label="Buka sertifikat pelatihan HR Staff di Google Drive">
+                            Buka Drive <i class="fa-solid fa-link" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="glassmorphism-luxury-card certification-glass-card-node">
+                    <div class="certification-image-frame-container">
+                        <img src="https://dimasbayusaputroofficial.github.io/myportofolio/bootcamppayroll.jpg"
+                             alt="Sertifikat Kelulusan Intensive Bootcamp HR Payroll Specialist dari Ioda Academy atas nama Dimas Bayu Saputro, periode Juni–Juli 2025"
+                             class="certification-thumbnail-image"
+                             loading="lazy">
+                    </div>
+                    <div class="certification-card-divider"></div>
+                    <h3>Intensive Bootcamp: HR Payroll Specialist</h3>
+                    <p class="certification-issuing-authority">Ioda Academy — Competency & Completion</p>
+                    <p class="certification-serial-meta-data">No. Kelulusan: 160/HR-BOOTCAMP/Competency/VII/2025<br>Periode Pelaksanaan: Juni – Juli 2025</p>
+                    <div class="certification-action-triggers">
+                        <button class="trigger-lightbox-button" aria-label="Pratinjau sertifikat HR Payroll Bootcamp">
+                            <i class="fa-regular fa-image" aria-hidden="true"></i> Pratinjau
+                        </button>
+                        <a href="https://drive.google.com/file/d/1HKq6an8ZY-mm9Oe79e7tKJANEhviCFhK/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="anchor-external-drive-sertifikat" aria-label="Buka sertifikat HR Payroll Bootcamp di Google Drive">
+                            Buka Drive <i class="fa-solid fa-link" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="chronology" class="structural-container master-section-spacing reveal-trigger" aria-labelledby="chronology-heading">
+            <div class="architectural-header">
+                <div class="architectural-subtitle-meta" aria-hidden="true">Rekam Jejak Karir</div>
+                <h2 id="chronology-heading" class="architectural-title-main">Pengalaman & Kegiatan</h2>
+            </div>
+            <p class="timeline-editorial-disclaimer">"Membangun landasan profesional unggul melalui riset analitis, tata kelola taktis, dan validasi kompetensi berkelanjutan"</p>
+
+            <div class="chronological-timeline-backbone" role="list" aria-label="Riwayat pengalaman kerja">
+                <div class="timeline-individual-block reveal-trigger" role="listitem">
+                    <div class="timeline-core-node" aria-hidden="true"></div>
+                    <article class="glassmorphism-luxury-card timeline-glassmorphism-card">
+                        <time class="timeline-date-range-badge" datetime="2023-09/2024-01">Sep 2023 – Jan 2024</time>
+                        <span class="timeline-functional-type-badge">Riset Lapangan</span>
+                        <h3>Research Assistant / Enumerator</h3>
+                        <p class="timeline-corporate-entity">Universitas Trunojoyo Madura <span class="entity-separator" aria-hidden="true">|</span> Jawa Timur</p>
+                        <ul class="timeline-achievement-bullet-stacks">
+                            <li>Membantu proses pengurusan perizinan penelitian di Bakesbangpol dan instansi terkait.</li>
+                            <li>Mengumpulkan data primer dan data sekunder dari berbagai instansi pemerintah sesuai kebutuhan penelitian.</li>
+                            <li>Melakukan wawancara dan koordinasi dengan narasumber serta pemangku kepentingan terkait.</li>
+                            <li>Membantu pengolahan dan analisis data menggunakan software Expert Choice 11.</li>
+                            <li>Menyusun laporan penelitian berdasarkan hasil pengumpulan dan analisis data.</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="timeline-individual-block reveal-trigger" role="listitem">
+                    <div class="timeline-core-node" aria-hidden="true"></div>
+                    <article class="glassmorphism-luxury-card timeline-glassmorphism-card">
+                        <time class="timeline-date-range-badge" datetime="2022-09/2022-12">Sep 2022 – Des 2022</time>
+                        <span class="timeline-functional-type-badge">Magang Industri</span>
+                        <h3>BUMDES Internship Officer</h3>
+                        <p class="timeline-corporate-entity">PT. Syncore Indonesia <span class="entity-separator" aria-hidden="true">|</span> Pamekasan Hub</p>
+                        <ul class="timeline-achievement-bullet-stacks">
+                            <li>Mengasistensi perapian berkas legalitas pendaftaran Badan Hukum entitas usaha demi pemenuhan kepatuhan hukum operasional.</li>
+                            <li>Memformulasikan struktur Standar Operasional Prosedur (SOP) divisi internal guna mendongkrak efisiensi mata rantai operasional kerja.</li>
+                            <li>Membangun modul sistem pelaporan administrasi logistik dan pembukuan keuangan otomatis berbasis Excel spreadsheet.</li>
+                            <li>Menyusun rancangan analisis potensi ekspansi bisnis makro desa guna memetakan diversifikasi unit usaha strategis baru.</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="timeline-individual-block reveal-trigger" role="listitem">
+                    <div class="timeline-core-node" aria-hidden="true"></div>
+                    <article class="glassmorphism-luxury-card timeline-glassmorphism-card">
+                        <time class="timeline-date-range-badge" datetime="2022">Tahun 2022</time>
+                        <span class="timeline-functional-type-badge">Manajemen Acara</span>
+                        <h3>Staff Divisi Acara</h3>
+                        <p class="timeline-corporate-entity">GEMPITA UTM <span class="entity-separator" aria-hidden="true">|</span> Bangkalan</p>
+                        <ul class="timeline-achievement-bullet-stacks">
+                            <li>Menyusun rundown dan membantu pelaksanaan kegiatan orientasi mahasiswa baru dengan lebih dari 150 peserta.</li>
+                            <li>Berkoordinasi dengan panitia untuk memastikan pembagian tugas berjalan sesuai rencana.</li>
+                            <li>Berkomunikasi dengan dosen, pemateri, dan pengisi acara untuk mendukung kelancaran kegiatan.</li>
+                            <li>Membantu persiapan teknis acara, termasuk perlengkapan, konsumsi, dan kebutuhan operasional lainnya.</li>
+                        </ul>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="structural-container master-section-spacing reveal-trigger">
-        <div class="architectural-header">
-            <div class="architectural-subtitle-meta">Kolaborasi & Sinergi</div>
-            <h2 class="architectural-title-main">Mari Terhubung Secara Profesional</h2>
-        </div>
-
-        <div class="contact-communications-matrix-layout">
-            <div class="contact-manifesto-left">
-                <h2>Siap Memberikan Kontribusi Nyata pada Akselerasi Tim Anda.</h2>
-                <p class="contact-manifesto-context-sub">Saya menyambut baik peluang karir, kolaborasi riset, serta posisi operasional profesional di ranah Human Resources, Payroll Administration, maupun People Development. Silakan hubungi saya melalui salah satu saluran interaktif yang tersedia.</p>
-                <a href="mailto:dimasbayusaputroofficial@gmail.com" class="button-dispatch-direct-email"><i class="fa-regular fa-paper-plane"></i> Kirim Pesan Elektronik <i class="fa-solid fa-arrow-right"></i></a>
+        <section id="contact" class="structural-container master-section-spacing reveal-trigger" aria-labelledby="contact-heading">
+            <div class="architectural-header">
+                <div class="architectural-subtitle-meta" aria-hidden="true">Kolaborasi & Sinergi</div>
+                <h2 id="contact-heading" class="architectural-title-main">Mari Terhubung Secara Profesional</h2>
             </div>
 
-            <div class="contact-links-vertical-stack-right">
-                <a href="mailto:dimasbayusaputroofficial@gmail.com" class="glassmorphism-luxury-card contact-hyperlink-card-node">
-                    <div class="contact-icon-matrix-shield"><i class="fa-solid fa-envelope"></i></div>
-                    <div class="contact-meta-data-strings">
-                        <span>Surel Resmi</span>
-                        <p>dimasbayusaputroofficial@gmail.com</p>
-                    </div>
-                </a>
+            <div class="contact-communications-matrix-layout">
+                <div class="contact-manifesto-left">
+                    <h3 style="font-family: var(--font-serif-luxury); font-size: 52px; font-weight: 500; line-height: 1.15; margin-bottom: 2rem; color: var(--text-premium-cream);">Siap Memberikan Kontribusi Nyata pada Akselerasi Tim Anda.</h3>
+                    <p class="contact-manifesto-context-sub">Saya menyambut baik peluang karir, kolaborasi riset, serta posisi operasional profesional di ranah Human Resources, Payroll Administration, maupun People Development. Silakan hubungi saya melalui salah satu saluran interaktif yang tersedia.</p>
+                    <a href="mailto:dimasbayusaputroofficial@gmail.com" class="button-dispatch-direct-email">
+                        <i class="fa-regular fa-paper-plane" aria-hidden="true"></i> Kirim Pesan Elektronik <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
 
-                <a href="https://www.linkedin.com/in/dimas-bayu-51307b2a2" target="_blank" class="glassmorphism-luxury-card contact-hyperlink-card-node">
-                    <div class="contact-icon-matrix-shield"><i class="fa-brands fa-linkedin-in"></i></div>
-                    <div class="contact-meta-data-strings">
-                        <span>Koneksi LinkedIn</span>
-                        <p>linkedin.com/in/dimas-bayu-51307b2a2</p>
-                    </div>
-                </a>
+                <div class="contact-links-vertical-stack-right">
+                    <a href="mailto:dimasbayusaputroofficial@gmail.com" class="glassmorphism-luxury-card contact-hyperlink-card-node" aria-label="Kirim email ke dimasbayusaputroofficial@gmail.com">
+                        <div class="contact-icon-matrix-shield" aria-hidden="true"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="contact-meta-data-strings">
+                            <span>Surel Resmi</span>
+                            <p>dimasbayusaputroofficial@gmail.com</p>
+                        </div>
+                    </a>
 
-                <a href="https://wa.me/6285257916525" target="_blank" class="glassmorphism-luxury-card contact-hyperlink-card-node">
-                    <div class="contact-icon-matrix-shield"><i class="fa-brands fa-whatsapp"></i></div>
-                    <div class="contact-meta-data-strings">
-                        <span>Saluran WhatsApp</span>
-                        <p>+62 852-5791-6525</p>
-                    </div>
-                </a>
+                    <a href="https://www.linkedin.com/in/dimas-bayu-51307b2a2" target="_blank" rel="noopener noreferrer" class="glassmorphism-luxury-card contact-hyperlink-card-node" aria-label="Kunjungi profil LinkedIn Dimas Bayu Saputro — terbuka di tab baru">
+                        <div class="contact-icon-matrix-shield" aria-hidden="true"><i class="fa-brands fa-linkedin-in"></i></div>
+                        <div class="contact-meta-data-strings">
+                            <span>Koneksi LinkedIn</span>
+                            <p>linkedin.com/in/dimas-bayu-51307b2a2</p>
+                        </div>
+                    </a>
 
-                <a href="https://www.instagram.com/dimasbayusaputro_/" target="_blank" class="glassmorphism-luxury-card contact-hyperlink-card-node">
-                    <div class="contact-icon-matrix-shield"><i class="fa-brands fa-instagram"></i></div>
-                    <div class="contact-meta-data-strings">
-                        <span>Instagram Profil</span>
-                        <p>@dimasbayusaputro_</p>
-                    </div>
-                </a>
+                    <a href="https://wa.me/6285257916525" target="_blank" rel="noopener noreferrer" class="glassmorphism-luxury-card contact-hyperlink-card-node" aria-label="Hubungi via WhatsApp +62 852-5791-6525 — terbuka di tab baru">
+                        <div class="contact-icon-matrix-shield" aria-hidden="true"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div class="contact-meta-data-strings">
+                            <span>Saluran WhatsApp</span>
+                            <p>+62 852-5791-6525</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.instagram.com/dimasbayusaputro_/" target="_blank" rel="noopener noreferrer" class="glassmorphism-luxury-card contact-hyperlink-card-node" aria-label="Kunjungi Instagram @dimasbayusaputro_ — terbuka di tab baru">
+                        <div class="contact-icon-matrix-shield" aria-hidden="true"><i class="fa-brands fa-instagram"></i></div>
+                        <div class="contact-meta-data-strings">
+                            <span>Instagram Profil</span>
+                            <p>@dimasbayusaputro_</p>
+                        </div>
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <footer class="monumental-footer">
+    <footer class="monumental-footer" role="contentinfo">
         <p>© 2026 Dimas Bayu Saputro · Portofolio Profesional Keahlian HR & Payroll Specialist</p>
     </footer>
 
-    <div class="lightbox-system-overlay" id="lightbox-system-overlay">
+    <!-- LIGHTBOX MODAL -->
+    <div class="lightbox-system-overlay" id="lightbox-system-overlay" role="dialog" aria-modal="true" aria-labelledby="lightbox-metadata-title-target" aria-hidden="true">
         <div class="lightbox-structural-wrapper">
-            <button id="lightbox-close-sentinel"><i class="fa-solid fa-xmark"></i></button>
+            <button id="lightbox-close-sentinel" aria-label="Tutup pratinjau sertifikat">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
             <div class="lightbox-internal-body">
                 <div class="lightbox-image-viewport-canvas">
-                    <img src="" id="lightbox-native-rendering-target" alt="Pratinjau Kredensial Sertifikasi">
+                    <img src="" id="lightbox-native-rendering-target" alt="">
                 </div>
-                <h3 id="lightbox-metadata-title-target">Nama Dokumen Sertifikasi</h3>
+                <h2 id="lightbox-metadata-title-target">Nama Dokumen Sertifikasi</h2>
             </div>
         </div>
     </div>
 
     <script>
-        // 1. DYNAMIC RESPONSIVE HAMBURGER MOBILE MENU CONTROLLER
+        // 1. HAMBURGER MENU
         const menuTrigger = document.getElementById('hamburger-menu-trigger');
         const navigationList = document.getElementById('nav-link-architecture-list');
 
         menuTrigger.addEventListener('click', () => {
+            const isExpanded = menuTrigger.getAttribute('aria-expanded') === 'true';
+            menuTrigger.setAttribute('aria-expanded', String(!isExpanded));
             navigationList.classList.toggle('active-responsive-state');
             menuTrigger.classList.toggle('active-open-state');
         });
@@ -2004,107 +2121,142 @@ html, body {
             anchor.addEventListener('click', () => {
                 navigationList.classList.remove('active-responsive-state');
                 menuTrigger.classList.remove('active-open-state');
+                menuTrigger.setAttribute('aria-expanded', 'false');
             });
         });
 
-        // 2. SCROLL OFFSET NAVBAR GLOW EFFECT
-        window.addEventListener('scroll', () => {
-            const dynamicNavbar = document.querySelector('.executive-navigation');
-            if (window.scrollY > 40) {
-                dynamicNavbar.classList.add('scrolled-state');
-            } else {
-                dynamicNavbar.classList.remove('scrolled-state');
-            }
-        });
+        // 2. NAVBAR SCROLL GLOW
+        const dynamicNavbar = document.querySelector('.executive-navigation');
+        const backToTop = document.getElementById('back-to-top');
+        const scrollTracker = document.getElementById('dynamic-scroll-tracker');
 
-        // 3. REAL-TIME CONTINUOUS SCROLL TRACKER BAR
         window.addEventListener('scroll', () => {
-            const mathProgress = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-            document.getElementById('dynamic-scroll-tracker').style.width = mathProgress + '%';
-        });
+            const scrollY = window.scrollY;
+            const maxScroll = document.body.scrollHeight - window.innerHeight;
+            const progress = Math.round((scrollY / maxScroll) * 100);
 
-        // 4. KINETIC CURSOR ENGINE RUNTIME
+            // Navbar
+            dynamicNavbar.classList.toggle('scrolled-state', scrollY > 40);
+
+            // Scroll tracker
+            scrollTracker.style.width = progress + '%';
+            scrollTracker.setAttribute('aria-valuenow', progress);
+
+            // Back to top
+            backToTop.classList.toggle('visible', scrollY > 400);
+        }, { passive: true });
+
+        // 3. CURSOR ENGINE
         const coreCursor = document.getElementById('luxury-cursor-core');
         const auraCursor = document.getElementById('luxury-cursor-aura');
-        
-        document.addEventListener('mousemove', (coordinates) => {
-            coreCursor.style.left = coordinates.clientX + 'px';
-            coreCursor.style.top = coordinates.clientY + 'px';
-            
-            // Added slight delay interpolation look for aura cursor
+
+        let mouseX = 0, mouseY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            coreCursor.style.left = mouseX + 'px';
+            coreCursor.style.top = mouseY + 'px';
             setTimeout(() => {
-                auraCursor.style.left = coordinates.clientX + 'px';
-                auraCursor.style.top = coordinates.clientY + 'px';
+                auraCursor.style.left = mouseX + 'px';
+                auraCursor.style.top = mouseY + 'px';
             }, 30);
         });
 
-        document.querySelectorAll('a, button, .certification-glass-card-node, .certification-image-frame-container').forEach(interactiveItem => {
-            interactiveItem.addEventListener('mouseenter', () => auraCursor.classList.add('magnetic-expand'));
-            interactiveItem.addEventListener('mouseleave', () => auraCursor.classList.remove('magnetic-expand'));
+        document.querySelectorAll('a, button, .methodology-pill-node, .payroll-tag-element, .certification-image-frame-container').forEach(el => {
+            el.addEventListener('mouseenter', () => auraCursor.classList.add('magnetic-expand'));
+            el.addEventListener('mouseleave', () => auraCursor.classList.remove('magnetic-expand'));
         });
 
-        // 5. INTUITIVE INTERSECTION OBSERVER FOR VISUAL REVEALS & BARS
+        // 4. INTERSECTION OBSERVER
         const observableItems = document.querySelectorAll('.reveal-trigger');
-        const viewportConfiguration = { threshold: 0.08, rootMargin: "0px 0px -40px 0px" };
-
         const coreObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active-in-viewport');
-                    
-                    const nestedBars = entry.target.querySelectorAll('.competency-bar-fill-interactive');
-                    if (nestedBars.length > 0) {
-                        nestedBars.forEach(bar => {
-                            bar.style.width = bar.getAttribute('data-width');
-                        });
-                    }
+                    // Animate competency bars
+                    entry.target.querySelectorAll('.competency-bar-fill-interactive').forEach(bar => {
+                        bar.style.width = bar.getAttribute('data-width');
+                    });
                     observer.unobserve(entry.target);
                 }
             });
-        }, viewportConfiguration);
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
         observableItems.forEach(item => coreObserver.observe(item));
 
-        // 6. KINETIC LIGHTBOX MODAL PREVIEW SYSTEM FOR CERTIFICATES
-        const dynamicLightboxOverlay = document.getElementById('lightbox-system-overlay');
-        const imageRenderingTarget = document.getElementById('lightbox-native-rendering-target');
-        const metadataTitleTarget = document.getElementById('lightbox-metadata-title-target');
-        const lightboxCloseSentinel = document.getElementById('lightbox-close-sentinel');
-        const interactiveCertNodes = document.querySelectorAll('.certification-glass-card-node');
+        // 5. LIGHTBOX SYSTEM
+        const lightboxOverlay = document.getElementById('lightbox-system-overlay');
+        const imageTarget = document.getElementById('lightbox-native-rendering-target');
+        const titleTarget = document.getElementById('lightbox-metadata-title-target');
+        const closeBtn = document.getElementById('lightbox-close-sentinel');
+        let lastFocused = null;
 
-        interactiveCertNodes.forEach(node => {
-            const structuralThumb = node.querySelector('.certification-thumbnail-image');
-            const individualPreviewTrigger = node.querySelector('.trigger-lightbox-button');
-            const visualContainerFrame = node.querySelector('.certification-image-frame-container');
-            const stringTitleSourceText = node.querySelector('h3').innerText;
+        document.querySelectorAll('.certification-glass-card-node').forEach(node => {
+            const thumb = node.querySelector('.certification-thumbnail-image');
+            const previewBtn = node.querySelector('.trigger-lightbox-button');
+            const imgFrame = node.querySelector('.certification-image-frame-container');
+            const cardTitle = node.querySelector('h3').innerText;
 
-            const executeIntentOpenModal = (event) => {
-                event.preventDefault();
-                if (structuralThumb) {
-                    imageRenderingTarget.src = structuralThumb.src;
-                    metadataTitleTarget.innerText = stringTitleSourceText;
-                    dynamicLightboxOverlay.classList.add('active-modal-open');
-                }
+            const openModal = (e) => {
+                e.preventDefault();
+                if (!thumb) return;
+                lastFocused = document.activeElement;
+                imageTarget.src = thumb.src;
+                imageTarget.alt = thumb.alt;
+                titleTarget.innerText = cardTitle;
+                lightboxOverlay.classList.add('active-modal-open');
+                lightboxOverlay.setAttribute('aria-hidden', 'false');
+                closeBtn.focus();
             };
 
-            if (visualContainerFrame) visualContainerFrame.addEventListener('click', executeIntentOpenModal);
-            if (individualPreviewTrigger) individualPreviewTrigger.addEventListener('click', executeIntentOpenModal);
+            if (imgFrame) imgFrame.addEventListener('click', openModal);
+            if (previewBtn) previewBtn.addEventListener('click', openModal);
         });
 
-        const executeIntentCloseModal = () => {
-            dynamicLightboxOverlay.classList.remove('active-modal-open');
+        const closeModal = () => {
+            lightboxOverlay.classList.remove('active-modal-open');
+            lightboxOverlay.setAttribute('aria-hidden', 'true');
+            if (lastFocused) lastFocused.focus();
         };
 
-        lightboxCloseSentinel.addEventListener('click', executeIntentCloseModal);
-        dynamicLightboxOverlay.addEventListener('click', (clickEvent) => {
-            if (clickEvent.target === dynamicLightboxOverlay) executeIntentCloseModal();
+        closeBtn.addEventListener('click', closeModal);
+        lightboxOverlay.addEventListener('click', (e) => {
+            if (e.target === lightboxOverlay) closeModal();
         });
 
-        document.addEventListener('keydown', (keyEvent) => {
-            if (keyEvent.key === 'Escape' && dynamicLightboxOverlay.classList.contains('active-modal-open')) {
-                executeIntentCloseModal();
-            }
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightboxOverlay.classList.contains('active-modal-open')) closeModal();
         });
+
+        // ✅ IMPROVEMENT 11: Structured Data JSON-LD untuk SEO
+        const jsonLd = {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Dimas Bayu Saputro",
+            "jobTitle": "HR & Payroll Specialist",
+            "description": "Profesional HR bersertifikat BNSP, spesialisasi administrasi payroll, PPh 21 TER, hukum ketenagakerjaan, dan SDM korporasi.",
+            "url": "https://dimasbayusaputroofficial.github.io/myportofolio/",
+            "image": "https://dimasbayusaputroofficial.github.io/myportofolio/fotoformaldimasbayusaputro.png",
+            "email": "dimasbayusaputroofficial@gmail.com",
+            "telephone": "+6285257916525",
+            "sameAs": [
+                "https://www.linkedin.com/in/dimas-bayu-51307b2a2",
+                "https://www.instagram.com/dimasbayusaputro_/"
+            ],
+            "alumniOf": [
+                { "@type": "EducationalOrganization", "name": "Universitas Trunojoyo Madura" },
+                { "@type": "EducationalOrganization", "name": "Universitas Airlangga" }
+            ],
+            "hasCredential": [
+                { "@type": "EducationalOccupationalCredential", "name": "Sertifikasi Kompetensi Human Capital Staff", "credentialCategory": "Professional Certification", "recognizedBy": { "@type": "Organization", "name": "BNSP" } }
+            ]
+        };
+
+        const scriptEl = document.createElement('script');
+        scriptEl.type = 'application/ld+json';
+        scriptEl.textContent = JSON.stringify(jsonLd);
+        document.head.appendChild(scriptEl);
     </script>
 </body>
 </html>
